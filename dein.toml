@@ -50,14 +50,15 @@ repo = 'tpope/vim-repeat'
 [[plugins]]# アイコン
 repo = 'ryanoasis/vim-devicons'
 
-# snippets~~~~~~~~~~~~~~~~
+# snippets****************
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet'
-# ~~~~~~~~~~~~~~~~~~~~~~~~
-# filer~~~~~~~~~~~~~~~~~~~
+# ************************ 
+
+# filer*******************
 [[plugins]]# ファイルみやすくなる
 repo = 'scrooloose/nerdtree'
 
@@ -66,4 +67,23 @@ repo = 'jistr/vim-nerdtree-tabs'
 
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
-# ~~~~~~~~~~~~~~~~~~~~~~~~
+# ************************ 
+
+# js**********************
+[[plugins]]
+repo = 'othree/yajs.vim'
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+
+[[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
+# ************************
+
+# golang******************
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+# ************************

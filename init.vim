@@ -59,6 +59,9 @@ let g:node_host_prog = system('echo -n $(which neovim-node-host)')
 
 " Golang
 let g:go_fmt_command = "goimports"
+let g:sonictemplate_vim_template_dir = [
+\ '~/.config/nvim/template',
+\]
 
 " vim-devicons
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
