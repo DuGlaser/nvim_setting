@@ -2,7 +2,6 @@ if !&compatible
   set nocompatible
 endif
 
-" dein settings {{{
 " dein自体の自動インストール
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_dir = s:cache_home . '/dein'
@@ -25,7 +24,6 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-" }}}
 
 set number             
 set autoindent        
@@ -35,6 +33,25 @@ set expandtab          "タブ入力を空白に変換
 set splitright         "画面を縦分割する際に右に開く
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
+" colorscheme
+syntax enable
+colorscheme lucario
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight SpecialKey ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
+
+" キーバインド
+" <モード> [later][now]
+noremap ; : 
+noremap : .
+noremap . ;
+nnoremap <C-h> gT 
+nnoremap <C-l> gt
+noremap <Space>h ^
+noremap <Space>l $
+noremap <Space>t :tabnew<CR>:te<CR>
+map <C-n> <plug>NERDTreeTabsToggle<CR>
 
 " Golang
 let g:go_fmt_command = "goimports"
