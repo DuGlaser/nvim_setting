@@ -7,5 +7,37 @@
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "graphql",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.autoFix": false,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "languageserver": {
+    "flow": {
+      "enable": false,
+      "command": "./node_modules/.bin/flow",
+      "args": ["lsp"],
+      "filetypes": ["javascript", "javascriptreact"],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "settings": {},
+      "rootPatterns": [".flowconfig"]
+    }
+  },
+  "suggest.echodocSupport": true,
+  "tsserver.enableJavascript": true
 }

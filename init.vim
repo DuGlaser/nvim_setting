@@ -25,6 +25,7 @@ if dein#check_install()
   call dein#install()
 endif
 
+set encoding=UTF-8
 set number             
 set autoindent        
 set tabstop=2          
@@ -34,7 +35,7 @@ set splitright         "画面を縦分割する際に右に開く
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
 " colorscheme
-syntax enable
+syntax on 
 colorscheme lucario
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
@@ -53,6 +54,13 @@ noremap <Space>l $
 noremap <Space>t :tabnew<CR>:te<CR>
 map <C-n> <plug>NERDTreeTabsToggle<CR>
 
+" node_moduleの設定
+let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+
 " Golang
 let g:go_fmt_command = "goimports"
 
+" vim-devicons
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let g:webdevicons_enable_airline_statusline = 1

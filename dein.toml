@@ -30,6 +30,34 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'fatih/vim-go'
 
+[[plugin]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'
+hook_add='source ~/.config/nvim/coc-options.vim'
+
+[[plugin]] # csできるようにする
+repo = 'tpope/vim-surround'
+
+[[plugins]]# コメントアウトが簡単になる(gc)
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'raphamorim/lucario'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]# アイコン
+repo = 'ryanoasis/vim-devicons'
+
+# snippets~~~~~~~~~~~~~~~~
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# filer~~~~~~~~~~~~~~~~~~~
 [[plugins]]# ファイルみやすくなる
 repo = 'scrooloose/nerdtree'
 
@@ -37,17 +65,5 @@ repo = 'scrooloose/nerdtree'
 repo = 'jistr/vim-nerdtree-tabs'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugin]]
-repo = 'neoclide/coc.nvim'
-build = './install.sh nightly'
-
-[[plugin]] # csできるようにする
-repo = 'tpope/vim-surround'
-
-[[plugins]]# コメントアウトが簡単になる
-repo = 'tomtom/tcomment_vim'
-
-[[plugins]]
-repo = 'raphamorim/lucario'
+repo = 'Xuyuanp/nerdtree-git-plugin'
+# ~~~~~~~~~~~~~~~~~~~~~~~~
