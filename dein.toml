@@ -30,13 +30,14 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'fatih/vim-go'
 
-[[plugin]]
+[[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
 hook_add='source ~/.config/nvim/coc-options.vim'
 
-[[plugin]] # csできるようにする
+[[plugins]] # csできるようにする
 repo = 'tpope/vim-surround'
+
 
 [[plugins]]# コメントアウトが簡単になる(gc)
 repo = 'tomtom/tcomment_vim'
@@ -50,7 +51,7 @@ repo = 'tpope/vim-repeat'
 [[plugins]]# アイコン
 repo = 'ryanoasis/vim-devicons'
 
-# snippets****************
+# [snippets] *************
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
@@ -58,7 +59,7 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'Shougo/neosnippet'
 # ************************ 
 
-# filer*******************
+# [filer] ******************
 [[plugins]]# ファイルみやすくなる
 repo = 'scrooloose/nerdtree'
 
@@ -69,7 +70,7 @@ repo = 'jistr/vim-nerdtree-tabs'
 repo = 'Xuyuanp/nerdtree-git-plugin'
 # ************************ 
 
-# js**********************
+# js *********************
 [[plugins]]
 repo = 'othree/yajs.vim'
 
@@ -83,7 +84,7 @@ repo = 'othree/javascript-libraries-syntax.vim'
 repo = 'othree/es.next.syntax.vim'
 # ************************
 
-# golang******************
+# golang *****************
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
 # ************************
