@@ -16,7 +16,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('jacoborus/tender.vim')
   call dein#load_toml('~/.config/nvim/dein.toml')
-  call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+  call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
 endif
@@ -34,6 +34,7 @@ set expandtab          "タブ入力を空白に変換
 set splitright         "画面を縦分割する際に右に開く
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
+let g:AutoClosePreserveDotReg = 0
 " colorscheme
 syntax on 
 colorscheme lucario
@@ -45,8 +46,6 @@ highlight EndOfBuffer ctermbg=NONE guibg=NONE
 " キーバインド
 " <モード> [later][now]
 noremap ; : 
-noremap : .
-noremap . ;
 nnoremap <C-h> gT 
 nnoremap <C-l> gt
 noremap <Space>h ^
@@ -58,7 +57,6 @@ map <C-n> <plug>NERDTreeTabsToggle<CR>
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
 
 " Golang
-let g:go_fmt_command = "goimports"
 let g:sonictemplate_vim_template_dir = [
 \ '~/.config/nvim/template',
 \]

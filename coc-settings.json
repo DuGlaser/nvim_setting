@@ -19,25 +19,5 @@
     "typescript",
     "typescriptreact"
   ],
-  "eslint.autoFix": false,
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "languageserver": {
-    "flow": {
-      "enable": false,
-      "command": "./node_modules/.bin/flow",
-      "args": ["lsp"],
-      "filetypes": ["javascript", "javascriptreact"],
-      "initializationOptions": {},
-      "requireRootPattern": true,
-      "settings": {},
-      "rootPatterns": [".flowconfig"]
-    }
-  },
-  "suggest.echodocSupport": true,
   "tsserver.enableJavascript": true
 }

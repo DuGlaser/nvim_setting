@@ -22,35 +22,36 @@ hook_add = '''
 repo = 'w0rp/ale'
 
 [[plugins]]
-repo = 'tpope/vim-endwise'
-
-[[plugins]]
 repo = 'Townk/vim-autoclose'
 
-[[plugins]]
-repo = 'fatih/vim-go'
 
-[[plugin]]
+[[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
 hook_add='source ~/.config/nvim/coc-options.vim'
 
-[[plugin]] # csできるようにする
+[[plugins]]
+repo = 'raphamorim/lucario'
+
+
+[[plugins]]# アイコン
+repo = 'ryanoasis/vim-devicons'
+
+# [ key ] ****************
+[[plugins]] # csできるようにする
 repo = 'tpope/vim-surround'
 
 [[plugins]]# コメントアウトが簡単になる(gc)
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
-repo = 'raphamorim/lucario'
-
-[[plugins]]
 repo = 'tpope/vim-repeat'
 
-[[plugins]]# アイコン
-repo = 'ryanoasis/vim-devicons'
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+# ************************ 
 
-# snippets****************
+# [ snippets ] ***********
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
@@ -58,7 +59,7 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'Shougo/neosnippet'
 # ************************ 
 
-# filer*******************
+# [ filer ] **************
 [[plugins]]# ファイルみやすくなる
 repo = 'scrooloose/nerdtree'
 
@@ -69,7 +70,7 @@ repo = 'jistr/vim-nerdtree-tabs'
 repo = 'Xuyuanp/nerdtree-git-plugin'
 # ************************ 
 
-# js**********************
+# [ js ] *****************
 [[plugins]]
 repo = 'othree/yajs.vim'
 
@@ -83,7 +84,18 @@ repo = 'othree/javascript-libraries-syntax.vim'
 repo = 'othree/es.next.syntax.vim'
 # ************************
 
-# golang******************
+# [ golang ] *************
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_fmt_command = "goimports"
+  let g:go_def_mapping_enabled = 0
+  let g:go_doc_keywordprg_enabled = 0
+'''
+
+[[plugins]]
+repo = 'fatih/vim-go'
 # ************************
