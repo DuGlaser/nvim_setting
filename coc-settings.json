@@ -7,17 +7,5 @@
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
-  },
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "graphql",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact"
-  ],
-  "tsserver.enableJavascript": true
+  }
 }

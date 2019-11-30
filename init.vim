@@ -36,6 +36,7 @@ set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
+colorscheme lucario
 syntax on 
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
