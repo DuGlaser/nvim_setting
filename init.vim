@@ -36,17 +36,13 @@ set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
 " colorscheme
 syntax on 
-colorscheme lucario
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
+highlight EndOfBuffer ctermbg=NONE guibg=NONE 
 " キーバインド
 " <モード> [later][now]
 noremap ; : 
-noremap : .
-noremap . ;
 nnoremap <C-h> gT 
 nnoremap <C-l> gt
 noremap <Space>h ^

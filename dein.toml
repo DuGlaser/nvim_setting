@@ -35,12 +35,6 @@ repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
 hook_add='source ~/.config/nvim/coc-options.vim'
 
-[[plugins]] # csできるようにする
-repo = 'tpope/vim-surround'
-
-
-[[plugins]]# コメントアウトが簡単になる(gc)
-repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'raphamorim/lucario'
@@ -50,6 +44,16 @@ repo = 'tpope/vim-repeat'
 
 [[plugins]]# アイコン
 repo = 'ryanoasis/vim-devicons'
+# [key] ******************
+[[plugins]] # csできるようにする
+repo = 'tpope/vim-surround'
+
+[[plugins]]# コメントアウトが簡単になる(gc)
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+# ************************
 
 # [snippets] *************
 [[plugins]]
