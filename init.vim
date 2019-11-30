@@ -37,12 +37,10 @@ set hls                "検索した文字をハイライトする
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
 syntax on 
-colorscheme lucario
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
+highlight EndOfBuffer ctermbg=NONE guibg=NONE 
 " キーバインド
 " <モード> [later][now]
 noremap ; : 
@@ -52,6 +50,7 @@ noremap <Space>h ^
 noremap <Space>l $
 noremap <Space>t :tabnew<CR>:te<CR>
 map <C-n> <plug>NERDTreeTabsToggle<CR>
+tnoremap <Esc> <C-\><C-n>
 
 " node_moduleの設定
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
