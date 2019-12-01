@@ -8,6 +8,5 @@
       "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "json","javascript","javascriptreact","typescript","typescriptreact","html"],
-  "prettier.singleQuote": true
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "json","javascript","javascriptreact","typescript","typescriptreact","html"]
 }
