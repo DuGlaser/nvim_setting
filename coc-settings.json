@@ -1,11 +1,13 @@
 {
-  "suggest.noselect":false,
-  "suggest.preferCompleteThanJumpPlaceholder":true,
+  "suggest.noselect": false,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
   "languageserver": {
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "json","javascript","javascriptreact","typescript","typescriptreact","html"],
+  "prettier.singleQuote": true
 }
