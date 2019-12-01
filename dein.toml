@@ -18,8 +18,8 @@ hook_add = '''
     let g:lightline = {'colorscheme': 'wombat'}
 '''
 
-[[plugins]] # 非同期でコードチェック
-repo = 'w0rp/ale'
+# [[plugins]] # 非同期でコードチェック
+# repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'
@@ -96,6 +96,4 @@ hook_add = '''
   let g:go_doc_keywordprg_enabled = 0
 '''
 
-[[plugins]]
-repo = 'fatih/vim-go'
 # ************************

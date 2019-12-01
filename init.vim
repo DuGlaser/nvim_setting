@@ -37,7 +37,7 @@ set hls                "検索した文字をハイライトする
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
 colorscheme lucario
-syntax on 
+syntax enable 
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
