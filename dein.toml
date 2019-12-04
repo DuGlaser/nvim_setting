@@ -57,6 +57,9 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
 # ************************ 
 
 # [ filer ] **************
