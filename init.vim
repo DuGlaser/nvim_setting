@@ -56,7 +56,12 @@ tnoremap <Esc> <C-\><C-n>
 " node_moduleの設定
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
 
+" Pythonの設定
+let g:python_host_prog = expand('/usr/local/bin/python2')
+let g:python3_host_prog = expand('/usr/local/bin/python3')
+
 " Golang
+au FileType go nmap <silent> <Space>r <Plug>(go-run)
 let g:sonictemplate_vim_template_dir = [
 \ '~/.config/nvim/template',
 \]
