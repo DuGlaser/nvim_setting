@@ -46,6 +46,7 @@ highlight EndOfBuffer ctermbg=NONE guibg=NONE
 " <モード> [later][now]
 noremap ; : 
 nnoremap <C-h> gT 
+nnoremap dm) vmzi)o`zod
 nnoremap <C-l> gt
 noremap <Space>h ^
 noremap <Space>l $
