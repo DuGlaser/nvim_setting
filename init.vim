@@ -54,6 +54,7 @@ noremap <Space>t :tabnew<CR>:te<CR>
 map <C-n> <plug>NERDTreeTabsToggle<CR>
 tnoremap <Esc> <C-\><C-n>
 
+
 " node_moduleの設定
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
 

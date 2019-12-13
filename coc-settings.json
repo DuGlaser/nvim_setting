@@ -8,5 +8,5 @@
       "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "json","javascript","javascriptreact","typescript","typescriptreact","html"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "json","javascript","javascriptreact","typescript","typescriptreact","html"]
 }
