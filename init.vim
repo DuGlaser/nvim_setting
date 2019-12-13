@@ -42,6 +42,7 @@ highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE 
+
 " キーバインド
 " <モード> [later][now]
 noremap ; : 
@@ -63,6 +64,7 @@ let g:python_host_prog = expand('/usr/local/bin/python2')
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 " Golang
+let g:go_def_mapping_enabled = 0
 au FileType go nmap <silent> <Space>r <Plug>(go-run)
 let g:sonictemplate_vim_template_dir = [
 \ '~/.config/nvim/template',
