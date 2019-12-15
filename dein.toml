@@ -116,3 +116,7 @@ nmap <Space>ba :AllBrowserReloadStart<CR>
 nmap <Space>bA :AllBrowserReloadStop<CR>
 '''
 # ************************
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+
