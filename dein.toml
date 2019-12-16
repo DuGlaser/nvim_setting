@@ -47,6 +47,18 @@ repo = 'tpope/vim-repeat'
 
 [[plugins]]
 repo = 'rhysd/clever-f.vim'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+nnoremap <C-p> :FZFFileList<CR>
+command! FZFFileList call fzf#run({
+    \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
+    \ 'sink': 'e'})
+'''
 # ************************ 
 
 # [ snippets ] ***********
@@ -120,3 +132,5 @@ nmap <Space>bA :AllBrowserReloadStop<CR>
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
 
+[[plugins]]
+repo = 'thosakwe/vim-flutter'

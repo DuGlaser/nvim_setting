@@ -25,6 +25,7 @@ if dein#check_install()
   call dein#install()
 endif
 
+set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
 set number             
 set autoindent        
@@ -74,3 +75,4 @@ let g:sonictemplate_vim_template_dir = [
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 let g:webdevicons_enable_airline_statusline = 1
+
