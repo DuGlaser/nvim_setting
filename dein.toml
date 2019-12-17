@@ -68,8 +68,6 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/neosnippet'
 
-[[plugins]]
-repo = 'mattn/emmet-vim'
 # ************************ 
 
 # [ filer ] **************
@@ -82,20 +80,6 @@ repo = 'jistr/vim-nerdtree-tabs'
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
 # ************************ 
-
-# [ js ] *****************
-# [plugins]]
-# repo = 'othree/yajs.vim'
-#
-# [[plugins]]
-# repo = 'maxmellon/vim-jsx-pretty'
-#
-# [[plugins]]
-# repo = 'othree/javascript-libraries-syntax.vim'
-#
-# [[plugins]]
-# repo = 'othree/es.next.syntax.vim'
-# ************************
 
 # [ golang ] *************
 [[plugins]]
@@ -112,6 +96,15 @@ hook_add = '''
 # ************************
 
 # [ HTML ] ***************
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+let g:user_emmet_leader_key = '<C-Y>'
+'''
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
 [[plugins]]
 repo = 'tell-k/vim-browsereload-mac'
 hook_add= '''
@@ -132,5 +125,3 @@ nmap <Space>bA :AllBrowserReloadStop<CR>
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
 
-[[plugins]]
-repo = 'thosakwe/vim-flutter'
