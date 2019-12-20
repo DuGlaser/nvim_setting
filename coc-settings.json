@@ -18,6 +18,5 @@
     "disableDynamicRegister": true,
     "trace.server": "verbose"
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "json","javascript","javascriptreact","typescript","typescriptreact","html"],
-  "coc.preferences.formatOnSaveFiletypes":["dart"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart"]
 }
