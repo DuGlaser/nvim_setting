@@ -29,6 +29,7 @@ set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
 set number             
 set autoindent        
+set expandtab
 set tabstop=2          
 set shiftwidth=2       
 set expandtab          "タブ入力を空白に変換
