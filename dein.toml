@@ -200,3 +200,10 @@ nmap <Space>bA :AllBrowserReloadStop<CR>
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
 
+[[plugins]]
+repo = 'previm/previm'
+hook_add = '''
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+'''
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
