@@ -190,6 +190,12 @@ nmap <Space>bO :OperaReloadStop<CR>
 nmap <Space>ba :AllBrowserReloadStart<CR>
 nmap <Space>bA :AllBrowserReloadStop<CR>
 '''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+hook_add = '''
+command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
+'''
 # ************************
 
 [[plugins]]
@@ -202,3 +208,6 @@ let g:previm_open_cmd = 'open -a Google\ Chrome'
 '''
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
