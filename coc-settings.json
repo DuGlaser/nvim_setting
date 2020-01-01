@@ -18,5 +18,6 @@
     "disableDynamicRegister": true,
     "trace.server": "verbose"
   },
+  "tsserver.enableJavascript": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart"]
 }
