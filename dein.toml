@@ -43,6 +43,9 @@ repo = 'tpope/vim-surround'
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
+repo = 'vim-scripts/YankRing.vim'
+
+[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
