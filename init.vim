@@ -25,6 +25,12 @@ if dein#check_install()
   call dein#install()
 endif
 
+let s:removed_plugins = dein#check_clean()
+if len(s:removed_plugins)>0
+  call map(s:removed_plugins, "delete(v:val, 'rf')")
+  call dein#recache_runtimepath()
+endif
+
 set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
 set number             
@@ -38,7 +44,7 @@ set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
-colorscheme lucario
+colorscheme lucario 
 syntax enable 
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
