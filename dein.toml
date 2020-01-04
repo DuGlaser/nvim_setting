@@ -12,14 +12,12 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+# status bar
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
     let g:lightline = {'colorscheme': 'wombat'}
 '''
-
-# [[plugins]] # 非同期でコードチェック
-# repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'
@@ -201,9 +199,12 @@ command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
 '''
 # ************************
 
+# [ dart ] ***************
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
+# ************************
 
+# [markdown ] ************
 [[plugins]]
 repo = 'previm/previm'
 hook_add = '''
@@ -211,6 +212,7 @@ let g:previm_open_cmd = 'open -a Google\ Chrome'
 '''
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
+# ************************
 
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
