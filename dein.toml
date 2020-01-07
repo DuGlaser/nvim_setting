@@ -216,3 +216,9 @@ repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
+
+# [[plugins]]
+# repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
