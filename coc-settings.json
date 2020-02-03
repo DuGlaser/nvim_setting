@@ -19,6 +19,6 @@
     "trace.server": "verbose"
   },
   "tsserver.enableJavascript": true,
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
-  "coc.preferences.formatOnSaveFiletypes": ["css", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart"]
+  "eslint.filetypes": ["javascript", "javascript.jsx","typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  "coc.preferences.formatOnSaveFiletypes": ["css","scss", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart","graphql"]
 }
