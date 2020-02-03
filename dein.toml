@@ -222,3 +222,12 @@ repo = 'christoomey/vim-tmux-navigator'
 
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+
+[[plugins]]
+repo = 'sudar/vim-arduino-syntax'
+
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
