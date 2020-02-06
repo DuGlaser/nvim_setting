@@ -9,6 +9,7 @@ let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
 endif
+
 let &runtimepath = s:dein_repo_dir .",". &runtimepath
 " プラグイン読み込み＆キャッシュ作成
 let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
@@ -42,15 +43,24 @@ set expandtab          "タブ入力を空白に変換
 set splitright         "画面を縦分割する際に右に開く
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
-set completeopt=menuone,noinsert
 
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
 colorscheme lucario 
 syntax enable 
+set pumblend=15
+set termguicolors
+hi Pmenu guifg=#9ea3c0 ctermfg=146 guibg=#32364c ctermbg=237
+hi PmenuSel guifg=#ffffff ctermfg=146 guibg=#424865 ctermbg=60
+hi PmenuSbar guibg=#292c3f ctermbg=236
+hi PmenuThumb guibg=#464f7f ctermbg=60
+hi Visual guibg=#363e7f ctermbg=61 gui=NONE cterm=NONE
+hi Comment ctermfg=44 ctermbg=NONE cterm=NONE guifg=#00ff90 guibg=NONE gui=NONE
+
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
+highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244 
 highlight EndOfBuffer ctermbg=NONE guibg=NONE 
 
 " キーバインド
@@ -62,10 +72,10 @@ nnoremap <C-l> gt
 noremap <Space>h ^
 noremap <Space>l $
 noremap <Space>t :tabnew<CR>:te<CR>
-map <C-n> <plug>NERDTreeTabsToggle<CR>
 tnoremap <Esc> <C-\><C-n>
-inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
-
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " node_moduleの設定
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
@@ -83,6 +93,5 @@ let g:sonictemplate_vim_template_dir = [
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 let g:webdevicons_enable_airline_statusline = 1
-
 
 
