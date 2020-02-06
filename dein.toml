@@ -25,11 +25,6 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'raphamorim/lucario'
 
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-build = './install.sh nightly'
-hook_add='source ~/.config/nvim/coc-options.vim'
-
 [[plugins]]# アイコン
 repo = 'ryanoasis/vim-devicons'
 
