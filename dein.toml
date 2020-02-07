@@ -12,6 +12,9 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
 # status bar
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -28,7 +31,9 @@ repo = 'raphamorim/lucario'
 [[plugins]]# アイコン
 repo = 'ryanoasis/vim-devicons'
 
+
 # [ key ] ****************
+# ************************ 
 [[plugins]] # csできるようにする
 repo = 'tpope/vim-surround'
 
@@ -55,8 +60,11 @@ command! FZFFileList call fzf#run({
     \ 'sink': 'e'})
 '''
 # ************************ 
+# ************************ 
+
 
 # [ snippets ] ***********
+# ************************ 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
@@ -64,8 +72,10 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'Shougo/neosnippet'
 
 # ************************ 
+# ************************ 
 
 # [ filer ] **************
+# ************************ 
 [[plugins]]
 repo ='kristijanhusak/defx-icons'
 
@@ -150,8 +160,11 @@ hook_source = '''
 			\ })
 '''
 # ************************ 
+# ************************ 
+
 
 # [ golang ] *************
+# ************************ 
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
 
@@ -159,8 +172,14 @@ repo = 'mattn/sonictemplate-vim'
 repo = 'mattn/vim-goimports'
 
 # ************************
+# ************************ 
 
-# [ HTML ] ***************
+
+# [ HTML&CSS ] ***********
+# ************************ 
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+
 [[plugins]]
 repo = 'mattn/emmet-vim'
 hook_add = '''
@@ -192,13 +211,19 @@ hook_add = '''
 command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
 '''
 # ************************
+# ************************ 
+
 
 # [ dart ] ***************
+# ************************ 
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
 # ************************
+# ************************ 
 
-# [markdown ] ************
+
+# [ markdown ] ************
+# ************************ 
 [[plugins]]
 repo = 'previm/previm'
 hook_add = '''
@@ -207,25 +232,25 @@ let g:previm_open_cmd = 'open -a Google\ Chrome'
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 # ************************
+# ************************ 
 
-[[plugins]]
-repo = 'christoomey/vim-tmux-navigator'
 
-# [[plugins]]
-# repo = 'leafgarland/typescript-vim'
 
+
+# [ js ] *****************
+# ************************ 
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
+# ************************ 
+# ************************ 
 
-[[plugins]]
-repo = 'sudar/vim-arduino-syntax'
 
-[[plugins]]
-repo = 'cakebaker/scss-syntax.vim'
 
+# [ lsp ] ****************
+# ************************ 
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
 
@@ -285,3 +310,5 @@ call asyncomplete#register_source(asyncomplete#sources#emoji#get_source_options(
 \ 'completor': function('asyncomplete#sources#emoji#completor'),
 \ }))
 '''
+# ************************ 
+# ************************ 

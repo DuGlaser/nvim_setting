@@ -94,4 +94,3 @@ let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 let g:webdevicons_enable_airline_statusline = 1
 
-
