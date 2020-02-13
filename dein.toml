@@ -98,8 +98,10 @@ repo ='Shougo/defx.nvim'
 on_cmd = 'Defx'
 depends = ['defx-icons', 'defx-git']
 hook_add = '''
-nnoremap <silent> <Space>f :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()`<CR>
-nnoremap <silent> <Space>F :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent> <Space>f 
+\ :w<CR>
+\ :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()`<CR>
+
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
 " Define mappings
@@ -214,9 +216,6 @@ command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
 # ************************ 
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
-hook_add = '''
-let g:dart_format_on_save = 1
-'''
 # ************************
 # ************************ 
 
@@ -299,15 +298,19 @@ repo = 'hrsh7th/vim-vsnip'
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
 
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-emoji.vim'
-hook_add = '''
-call asyncomplete#register_source(asyncomplete#sources#emoji#get_source_options({
-\ 'name': 'emoji',
-\ 'whitelist': ['*'],
-\ 'completor': function('asyncomplete#sources#emoji#completor'),
-\ }))
-'''
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete-buffer.vim'
+# hook_add = '''
+# call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+#     \ 'name': 'buffer',
+#     \ 'whitelist': ['*'],
+#     \ 'blacklist': ['go'],
+#     \ 'completor': function('asyncomplete#sources#buffer#completor'),
+#     \ 'config': {
+#     \    'max_buffer_size': 5000000,
+#     \  },
+#     \ }))
+# '''
 # ************************ 
 # ************************ 
 [[plugins]]
