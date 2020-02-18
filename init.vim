@@ -50,6 +50,7 @@ colorscheme lucario
 syntax enable 
 set pumblend=15
 set termguicolors
+set background=dark
 hi Pmenu guifg=#9ea3c0 ctermfg=146 guibg=#32364c ctermbg=237
 hi PmenuSel guifg=#ffffff ctermfg=146 guibg=#424865 ctermbg=60
 hi PmenuSbar guibg=#292c3f ctermbg=236
