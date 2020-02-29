@@ -4,6 +4,9 @@ repo = 'Shougo/dein.vim'
 [[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
+hook_add = '''
+let g:context_filetype#search_offset = 100
+'''
 
 [[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
 repo = 'Shougo/context_filetype.vim'
@@ -80,6 +83,18 @@ repo = 'Shougo/neosnippet'
 repo ='kristijanhusak/defx-icons'
 
 [[plugins]]
+repo = 'liuchengxu/vim-clap'
+hook_add = '''
+let g:clap_enable_icon = 1
+let g:clap_theme = {'preview':{'guibg':'#202124','ctermbg':'61'  }}
+let g:clap_insert_mode_only = v:true
+nnoremap <silent><Space>f 
+\ :<C-u>Clap gfiles<CR>
+nnoremap <silent><Space>g 
+\ :<C-u>Clap grep<CR>
+'''
+
+[[plugins]]
 repo ='kristijanhusak/defx-git'
 hook_add = '''
 	let g:defx_git#indicators = {
@@ -117,7 +132,7 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': 1,
       \ })
 
-nnoremap <silent> <Space>f 
+nnoremap <silent> <Space>F 
 " \ :w<CR>
 \ :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()`<CR>
 
@@ -221,13 +236,11 @@ repo = 'dart-lang/dart-vim-plugin'
 
 # [ markdown ] ************
 # ************************ 
-[[plugins]]
-repo = 'previm/previm'
-hook_add = '''
-let g:previm_open_cmd = 'open -a Google\ Chrome'
-'''
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
+ [[plugins]]
+ repo = 'previm/previm'
+ hook_add = '''
+ let g:previm_open_cmd = 'open -a Google\ Chrome'
+ '''
 # ************************
 # ************************ 
 
@@ -257,13 +270,7 @@ hook_add = '''
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 '''
 
-# TODO:tomlファイルを分割する
-# [[plugins]]
-# repo = 'Shougo/denite.nvim'
-# hook_add='''
-#   nnoremap <silent> <space>fr :<C-u>Denite file_mru<CR>
-#   nnoremap <silent> <space>fb :<C-u>Denite buffer<CR>
-#   nnoremap <silent> <space>fy :<C-u>Denite neoyank<CR>
-#   nnoremap <silent> <space>ff :<C-u>Denite file_rec<CR>
-#   nnoremap <silent> <space>fu :<C-u>Denite outline<CR>
-# '''
+[[plugins]]
+repo = 'chrisbra/Colorizer'
+
+
