@@ -1,0 +1,78 @@
+# [ golang ] *************
+# ************************ 
+
+[[plugins]]
+repo = 'mattn/vim-goimports'
+
+# ************************
+# ************************ 
+
+
+# [ HTML&CSS ] ***********
+# ************************ 
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+let g:user_emmet_leader_key = '<C-Y>'
+'''
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'tell-k/vim-browsereload-mac'
+hook_add= '''
+let g:returnApp = "iTerm"
+nmap <Space>bc :ChromeReloadStart<CR>
+nmap <Space>bC :ChromeReloadStop<CR>
+nmap <Space>bf :FirefoxReloadStart<CR>
+nmap <Space>bF :FirefoxReloadStop<CR>
+nmap <Space>bs :SafariReloadStart<CR>
+nmap <Space>bS :SafariReloadStop<CR>
+nmap <Space>bo :OperaReloadStart<CR>
+nmap <Space>bO :OperaReloadStop<CR>
+nmap <Space>ba :AllBrowserReloadStart<CR>
+nmap <Space>bA :AllBrowserReloadStop<CR>
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+hook_add = '''
+command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
+'''
+# ************************
+# ************************ 
+
+
+# [ dart ] ***************
+# ************************ 
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+# ************************
+# ************************ 
+
+
+# [ markdown ] ************
+# ************************ 
+ [[plugins]]
+ repo = 'previm/previm'
+ hook_add = '''
+ let g:previm_open_cmd = 'open -a Google\ Chrome'
+ '''
+# ************************
+# ************************ 
+
+
+# [ js ] *****************
+# ************************ 
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+# ************************ 
+# ************************ 
+

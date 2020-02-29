@@ -15,10 +15,9 @@ let &runtimepath = s:dein_repo_dir .",". &runtimepath
 let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
-  call dein#add('jacoborus/tender.vim')
-  " call dein#load_toml('~/.config/nvim/dein.toml')
-  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
+  call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
+  call dein#load_toml('~/.config/nvim/dein/dein_defx.toml', {'lazy': 1})
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()

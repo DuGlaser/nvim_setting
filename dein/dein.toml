@@ -1,0 +1,96 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+hook_add = '''
+let g:context_filetype#search_offset = 100
+'''
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+
+[[plugins]] 
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = {'colorscheme': 'wombat'}
+'''
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'raphamorim/lucario'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'vim-scripts/YankRing.vim'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+nnoremap <C-p> :FZFFileList<CR>
+command! FZFFileList call fzf#run({
+    \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
+    \ 'sink': 'e'})
+'''
+
+
+[[plugins]]
+repo = 'liuchengxu/vim-clap'
+hook_add = '''
+let g:clap_enable_icon = 1
+let g:clap_theme = {'preview':{'guibg':'#202124','ctermbg':'61'  }}
+let g:clap_insert_mode_only = v:true
+nnoremap <silent><Space>f 
+\ :<C-u>Clap files<CR>
+nnoremap <silent><Space>g 
+\ :<C-u>Clap grep<CR>
+nnoremap <silent><Space>b 
+\ :<C-u>Clap buffers<CR>
+'''
+
+[[plugins]]
+repo = "neoclide/coc.nvim"
+merge = 0
+rev = "release"
+build = './install.sh nightly'
+hook_add='source ~/.config/nvim/coc-options.vim'
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+hook_add = '''
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+'''
+
+[[plugins]]
+repo = 'chrisbra/Colorizer'
+
