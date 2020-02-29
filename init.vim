@@ -16,7 +16,9 @@ let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('jacoborus/tender.vim')
-  call dein#load_toml('~/.config/nvim/dein.toml')
+  " call dein#load_toml('~/.config/nvim/dein.toml')
+  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -79,11 +81,26 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+nmap # <Space><Space>:%s/<C-r>///g<Left><Left>
+xnoremap <silent> <Space> mz:call <SID>set_vsearch()<CR>:set hlsearch<CR>`z
+xnoremap * :<C-u>call <SID>set_vsearch()<CR>/<C-r>/<CR>
+xmap # <Space>:%s/<C-r>///g<Left><Left>
+inoremap <C-t> <Esc><Left>"zx"zpa
+nnoremap <silent> <Space><C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap x "_x
+nnoremap s "_s
+
+function! s:set_vsearch()
+  silent normal gv"zy
+  let @/ = '\V' . substitute(escape(@z, '/\'), '\n', '\\n', 'g')
+endfunction
 " node_moduleの設定
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
 
 " Pythonの設定
 let g:python_host_prog = expand('/usr/local/bin/python2')
+
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 " Golang
