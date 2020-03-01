@@ -41,7 +41,7 @@ call defx#custom#option('_', {
 '''
 hook_add = '''
 
-nnoremap <silent> <Space>F 
+nnoremap <silent> <Space>f 
 " \ :w<CR>
 \ :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()`<CR>
 

@@ -24,7 +24,7 @@ repo = 'christoomey/vim-tmux-navigator'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-    let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {'colorscheme': 'wombat'}
 '''
 
 [[plugins]]
@@ -68,13 +68,13 @@ command! FZFFileList call fzf#run({
 repo = 'liuchengxu/vim-clap'
 hook_add = '''
 let g:clap_enable_icon = 1
-let g:clap_theme = {'preview':{'guibg':'#202124','ctermbg':'61'  }}
+let g:clap_theme = {'preview':{'guibg':'#202124','ctermbg':'61'  }} 
 let g:clap_insert_mode_only = v:true
-nnoremap <silent><Space>f 
+nnoremap <silent><Space>cf 
 \ :<C-u>Clap files<CR>
-nnoremap <silent><Space>g 
+nnoremap <silent><Space>cg 
 \ :<C-u>Clap grep<CR>
-nnoremap <silent><Space>b 
+nnoremap <silent><Space>cb 
 \ :<C-u>Clap buffers<CR>
 '''
 
