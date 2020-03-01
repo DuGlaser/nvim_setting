@@ -16,7 +16,7 @@ let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
+  call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_defx.toml', {'lazy': 1})
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
@@ -48,11 +48,11 @@ set completeopt=menuone,noinsert
 
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
-colorscheme lucario 
 syntax enable 
+colorscheme lucario 
 set pumblend=15
 set termguicolors
-set background=dark
+
 hi Pmenu guifg=#9ea3c0 ctermfg=146 guibg=#32364c ctermbg=237
 hi PmenuSel guifg=#ffffff ctermfg=146 guibg=#424865 ctermbg=60
 hi PmenuSbar guibg=#292c3f ctermbg=236
