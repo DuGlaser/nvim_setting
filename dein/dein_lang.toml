@@ -15,9 +15,6 @@ repo = 'cakebaker/scss-syntax.vim'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-hook_add = '''
-let g:user_emmet_leader_key = '<C-Y>'
-'''
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
@@ -73,6 +70,12 @@ repo = 'peitalin/vim-jsx-typescript'
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+hook_add = '''
+let g:javascript_plugin_flow = 1
+'''
 # ************************ 
 # ************************ 
 

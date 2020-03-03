@@ -24,14 +24,14 @@ repo = 'christoomey/vim-tmux-navigator'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {'colorscheme': 'rigel'}
 '''
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'
 
 [[plugins]]
-repo = 'raphamorim/lucario'
+repo = 'Rigellute/rigel'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
@@ -94,3 +94,5 @@ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 [[plugins]]
 repo = 'chrisbra/Colorizer'
 
+[[plugins]]
+repo = 'iberianpig/tig-explorer.vim'
