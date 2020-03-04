@@ -45,14 +45,15 @@ set splitright         "画面を縦分割する際に右に開く
 set clipboard=unnamed  "yank した文字列をクリップボードにコピー
 set hls                "検索した文字をハイライトする
 set completeopt=menuone,noinsert
+set t_Co=256
 set nocompatible
 
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
+set termguicolors
 syntax enable 
 colorscheme rigel 
 set pumblend=15
-set termguicolors
 
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
