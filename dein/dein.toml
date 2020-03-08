@@ -12,6 +12,13 @@ let g:context_filetype#search_offset = 100
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
+repo = "neoclide/coc.nvim"
+merge = 0
+rev = "release"
+build = './install.sh nightly'
+hook_add='source ~/.config/nvim/coc-options.vim'
+
+[[plugins]]
 repo = 'mattn/sonictemplate-vim'
 
 [[plugins]] 
@@ -77,13 +84,6 @@ nnoremap <silent><Space>cg
 nnoremap <silent><Space>cb 
 \ :<C-u>Clap buffers<CR>
 '''
-
-[[plugins]]
-repo = "neoclide/coc.nvim"
-merge = 0
-rev = "release"
-build = './install.sh nightly'
-hook_add='source ~/.config/nvim/coc-options.vim'
 
 [[plugins]]
 repo = "airblade/vim-gitgutter"
