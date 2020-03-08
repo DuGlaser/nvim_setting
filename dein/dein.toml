@@ -94,5 +94,3 @@ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 [[plugins]]
 repo = 'chrisbra/Colorizer'
 
-[[plugins]]
-repo = 'iberianpig/tig-explorer.vim'
