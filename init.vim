@@ -47,6 +47,8 @@ set hls                "検索した文字をハイライトする
 set completeopt=menuone,noinsert
 set t_Co=256
 set nocompatible
+set ignorecase 
+set incsearch
 
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
