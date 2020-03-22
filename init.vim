@@ -65,13 +65,12 @@ highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
 " キーバインド
 " <モード> [later][now]
+let mapleader = "\<Space>"
 noremap ; : 
 nnoremap <C-h> gT 
 nnoremap dm) vmzi)o`zod
 nnoremap <C-l> gt
-noremap <Space>h ^
-noremap <Space>l $
-noremap <Space>t :tabnew<CR>:te<CR>
+noremap <Space>i %
 tnoremap <Esc> <C-\><C-n>
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -83,7 +82,7 @@ xnoremap <silent> <Space> mz:call <SID>set_vsearch()<CR>:set hlsearch<CR>`z
 xnoremap * :<C-u>call <SID>set_vsearch()<CR>/<C-r>/<CR>
 xmap # <Space>:%s/<C-r>///g<Left><Left>
 inoremap <C-t> <Esc><Left>"zx"zpa
-nnoremap <silent> <Space><C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <Space>l :<C-u>nohlsearch<CR><C-l>
 nnoremap x "_x
 nnoremap s "_s
 
