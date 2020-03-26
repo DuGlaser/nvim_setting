@@ -145,10 +145,10 @@ repo = 'machakann/vim-sandwich'
 
 # fzf ====================================
 # [WIP]
-# [[plugins]]
-# repo = 'junegunn/fzf'
-# build = './install --all'
-# marge = 0
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+marge = 0
 #
 # [[plugins]]
 # repo = 'yuki-ycino/fzf-preview.vim'
