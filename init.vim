@@ -49,6 +49,7 @@ set t_Co=256
 set nocompatible
 set ignorecase 
 set incsearch
+set inccommand=split
 
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
