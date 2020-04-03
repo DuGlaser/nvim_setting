@@ -50,6 +50,8 @@ set nocompatible
 set ignorecase 
 set incsearch
 set inccommand=split
+set conceallevel=0
+let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
 " colorscheme
