@@ -102,16 +102,18 @@ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 repo = 'chrisbra/Colorizer'
 
 [[plugins]]
-repo = 'DougBeney/pickachu'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 repo = 'thinca/vim-zenspace'
 hook_add = '''
 let g:zenspace#default_mode = 'on'
 '''
+
+# git ====================================
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+# ========================================
 
 # visual mode plugins ====================
 [[plugins]]
@@ -143,36 +145,7 @@ repo = 'kana/vim-textobj-entire'
 repo = 'machakann/vim-sandwich'
 # ========================================
 
-# fzf ====================================
-# [WIP]
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
 marge = 0
-#
-# [[plugins]]
-# repo = 'yuki-ycino/fzf-preview.vim'
-# hook_add = '''
-# nmap <Space>F [fzf-p]
-# xmap <Space>F [fzf-p]
-# 
-# nnoremap <silent> [fzf-p]p     :<C-u>FzfPreviewFromResources project_mru git<CR>
-# nnoremap <silent> [fzf-p]gs    :<C-u>FzfPreviewGitStatus<CR>
-# nnoremap <silent> [fzf-p]b     :<C-u>FzfPreviewBuffers<CR>
-# nnoremap <silent> [fzf-p]B     :<C-u>FzfPreviewAllBuffers<CR>
-# nnoremap <silent> [fzf-p]o     :<C-u>FzfPreviewFromResources buffer project_mru<CR>
-# nnoremap <silent> [fzf-p]<C-o> :<C-u>FzfPreviewJumps<CR>
-# nnoremap <silent> [fzf-p]g;    :<C-u>FzfPreviewChanges<CR>
-# nnoremap <silent> [fzf-p]/     :<C-u>FzfPreviewLines -add-fzf-arg=--no-sort -add-fzf-arg=--query="'"<CR>
-# nnoremap <silent> [fzf-p]*     :<C-u>FzfPreviewLines -add-fzf-arg=--no-sort -add-fzf-arg=--query="'<C-r>=expand('<cword>')<CR>"<CR>
-# nnoremap          [fzf-p]gr    :<C-u>FzfPreviewProjectGrep .<CR>
-# xnoremap          [fzf-p]gr    "sy:FzfPreviewProjectGrep<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
-# nnoremap <silent> [fzf-p]t     :<C-u>FzfPreviewBufferTags<CR>
-# nnoremap <silent> [fzf-p]q     :<C-u>FzfPreviewQuickFix<CR>
-# nnoremap <silent> [fzf-p]l     :<C-u>FzfPreviewLocationList<CR>
-# let g:fzf_preview_command = 'bat --color=always --style=grid {-1}'
-# let g:fzf_preview_grep_cmd = " rg --line-number --no-heading --colors 'match:bg:yellow' --colors 'match:fg:black' --colors 'match:style:nobold' --colors 'path:fg:green' --colors 'path:style:bold' --colors 'line:fg:yellow' --colors 'line:style:bold'"
-# " let g:fzf_preview_fzf_color_option = 'fg:124,bg:16,preview-fg:15,hl:202,fg+:214,bg+:52,hl+:231,info:52,prompt:196,spinner:208,pointer:196,marker:208'
-# let g:fzf_preview_lines_command = 'bat --color=always --style=grid --theme=ansi-dark --plain'
-# '''
-# ========================================
