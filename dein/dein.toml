@@ -111,8 +111,6 @@ let g:zenspace#default_mode = 'on'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'lambdalisue/gina.vim'
 # ========================================
 
 # visual mode plugins ====================
