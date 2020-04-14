@@ -68,8 +68,11 @@ repo = 'dart-lang/dart-vim-plugin'
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'
 
+# [[plugins]]
+# repo = 'mxw/vim-jsx'
+
 [[plugins]]
-repo = 'mxw/vim-jsx'
+repo = 'MaxMEllon/vim-jsx-pretty'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
