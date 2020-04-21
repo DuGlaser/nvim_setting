@@ -49,9 +49,6 @@ endfunction
 '''
 
 [[plugins]]
-repo = 'Townk/vim-autoclose'
-
-[[plugins]]
 repo = 'Rigellute/rigel'
 
 [[plugins]]
