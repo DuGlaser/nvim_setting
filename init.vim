@@ -74,9 +74,6 @@ nnoremap dm) vmzi)o`zod
 nnoremap <C-l> gt
 noremap <Space>i %
 tnoremap <Esc> <C-\><C-n>
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 nmap s <Nop>
 xmap s <Nop>
 
@@ -134,3 +131,4 @@ let g:webdevicons_enable_airline_statusline = 1
 " set filetype
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+au FileType * set fo-=c fo-=r fo-=o
