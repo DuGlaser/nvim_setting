@@ -59,6 +59,7 @@ syntax enable
 colorscheme rigel 
 set pumblend=15
 
+let g:loaded_matchparen=1
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
@@ -129,6 +130,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 let g:webdevicons_enable_airline_statusline = 1
 
 " set filetype
+autocmd FileType vue syntax sync fromstart
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 au FileType * set fo-=c fo-=r fo-=o
