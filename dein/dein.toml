@@ -154,4 +154,16 @@ marge = 0
 repo = 'cocopon/vaffle.vim'
 hook_add = '''
 nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>
+let g:vaffle_show_hidden_files = 1
+'''
+
+[[plugins]]
+repo = 'tyru/columnskip.vim'
+hook_add = '''
+nmap sj <Plug>(columnskip:nonblank:next)
+omap sj <Plug>(columnskip:nonblank:next)
+xmap sj <Plug>(columnskip:nonblank:next)
+nmap sk <Plug>(columnskip:nonblank:prev)
+omap sk <Plug>(columnskip:nonblank:prev)
+xmap sk <Plug>(columnskip:nonblank:prev)
 '''
