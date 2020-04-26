@@ -5,6 +5,8 @@
   "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,	
   "tsserver.enableJavascript": true,	
+  "eslint.autoFixOnSave": true,
+  "vetur.format.defaultFormatter.css": "prettier",
   "eslint.filetypes": ["javascript","vue","javascript.jsx","typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],	
-  "coc.preferences.formatOnSaveFiletypes": ["css","scss", "json","javascript","vue","javascriptreact","typescript","typescriptreact","html","dart","graphql"]	
+  "coc.preferences.formatOnSaveFiletypes": ["css","scss", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart","graphql"]	
 }
