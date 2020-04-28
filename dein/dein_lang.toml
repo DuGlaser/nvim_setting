@@ -94,9 +94,32 @@ let g:javascript_plugin_flow = 1
 # ************************ 
 
 # [ rust ] ===============
+# ========================
 [[plugins]]
 repo = 'rust-lang/rust.vim'
 hook_add = '''
 let g:rustfmt_autosave = 1
 '''
 # ========================
+# ========================
+
+# [ ruby ] ===============
+# ========================
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'ruby-formatter/rufo-vim'
+hook_add = '''
+let g:rufo_auto_formatting = 1
+'''
+# ========================
+# ========================
+
+# [ java ] ===============
+# ========================
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+# ========================
+# ========================
+
