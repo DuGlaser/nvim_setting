@@ -154,6 +154,7 @@ marge = 0
 repo = 'cocopon/vaffle.vim'
 hook_add = '''
 nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>
+let g:vaffle_renderer = 'devicons'
 let g:vaffle_show_hidden_files = 1
 '''
 

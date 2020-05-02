@@ -5,8 +5,8 @@
   "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,	
   "tsserver.enableJavascript": true,	
+  "eslint.enable": true,
   "eslint.autoFixOnSave": true,
-  "vetur.format.defaultFormatter.css": "prettier",
+  "solargraph.autoformat": true,
   "eslint.filetypes": ["javascript","vue","javascript.jsx","typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],	
-  "coc.preferences.formatOnSaveFiletypes": ["css","scss", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart","graphql"]	
 }

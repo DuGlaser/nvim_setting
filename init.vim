@@ -39,10 +39,9 @@ set autoindent
 set expandtab
 set tabstop=2          
 set shiftwidth=2       
-set expandtab          "タブ入力を空白に変換
-set splitright         "画面を縦分割する際に右に開く
-set clipboard=unnamed  "yank した文字列をクリップボードにコピー
-set hls                "検索した文字をハイライトする
+set expandtab          
+set clipboard=unnamed  
+set hls               
 set completeopt=menuone,noinsert
 set t_Co=256
 set nocompatible
@@ -63,8 +62,11 @@ let g:loaded_matchparen=1
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244 
-highlight EndOfBuffer ctermbg=NONE guibg=NONE 
+highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
+highlight CursorLineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
+highlight SignColumn ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
+
 
 " キーバインド
 " <モード> [later][now]
@@ -114,4 +116,8 @@ let g:webdevicons_enable_airline_statusline = 1
 autocmd FileType vue syntax sync fromstart
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-au FileType * set fo-=c fo-=r fo-=o
+augroup auto_comment_off
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions-=r
+    autocmd BufEnter * setlocal formatoptions-=o
+augroup END
