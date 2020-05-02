@@ -8,5 +8,12 @@
   "eslint.enable": true,
   "eslint.autoFixOnSave": true,
   "solargraph.autoformat": true,
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.options.tabSize":4,
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.completion.autoImport": true, 
+  "vetur.useWorkspaceDependencies": true,
+  "prettier.singleQuote": true,
   "eslint.filetypes": ["javascript","vue","javascript.jsx","typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],	
+  "coc.preferences.formatOnSaveFiletypes": ["css","scss","vue", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart","graphql"]
 }
