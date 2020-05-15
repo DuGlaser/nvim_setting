@@ -1,18 +1,39 @@
-{	
-  "suggest.noselect": false,	
+{
+  "suggest.noselect": false,
   "suggest.triggerAfterInsertEnter": true,
   "suggest.acceptSuggestionOnCommitCharacter": true,
   "suggest.minTriggerInputLength": 1,
-  "suggest.preferCompleteThanJumpPlaceholder": true,	
-  "tsserver.enableJavascript": true,	
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "tsserver.enableJavascript": true,
   "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
   "solargraph.autoformat": true,
   "vetur.validation.template": false,
-  "vetur.format.options.tabSize":4,
+  "vetur.format.options.tabSize": 4,
   "vetur.format.scriptInitialIndent": true,
-  "vetur.completion.autoImport": true, 
+  "vetur.format.styleInitialIndent": true,
+  "vetur.completion.autoImport": true,
   "vetur.useWorkspaceDependencies": true,
   "prettier.singleQuote": true,
-  "eslint.filetypes": ["javascript","vue","javascript.jsx","typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],	
-  "coc.preferences.formatOnSaveFiletypes": ["css","scss","vue", "json","javascript","javascriptreact","typescript","typescriptreact","html","dart","graphql"]
+  "eslint.filetypes": [
+    "javascript",
+    "javascript.jsx",
+    "vue",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "scss",
+    "json",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "dart",
+    "graphql"
+  ]
 }

@@ -17,6 +17,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 0})
+  " call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -90,15 +91,19 @@ nnoremap <silent> <Space>l :<C-u>nohlsearch<CR><C-l>
 nnoremap x "_x
 nnoremap s "_s
 
+set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
+
 function! s:set_vsearch()
   silent normal gv"zy
   let @/ = '\V' . substitute(escape(@z, '/\'), '\n', '\\n', 'g')
 endfunction
 " node_moduleの設定
-let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+" let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
 " Pythonの設定
-let g:python_host_prog = expand('/usr/local/bin/python2')
+let g:python_host_prog = expand('/usr/bin/python2')
 
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 

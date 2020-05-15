@@ -154,7 +154,11 @@ marge = 0
 repo = 'cocopon/vaffle.vim'
 hook_add = '''
 nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>
-let g:vaffle_renderer = 'devicons'
+  function! VaffleRenderCustomIcon(item)
+    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)
+  endfunction
+
+  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'
 let g:vaffle_show_hidden_files = 1
 '''
 
