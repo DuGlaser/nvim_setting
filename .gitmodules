@@ -1,0 +1,3 @@
+[submodule "kite"]
+	path = pack/kite/start/kite/
+	url = https://github.com/kiteco/vim-plugin
