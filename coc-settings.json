@@ -4,6 +4,14 @@
   "suggest.acceptSuggestionOnCommitCharacter": true,
   "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "disableWorkspaceFolders": true,
+      "filetypes": ["go"]
+    }
+  },
   "tsserver.enableJavascript": true,
   "eslint.enable": true,
   "eslint.autoFixOnSave": true,
@@ -34,6 +42,7 @@
     "typescriptreact",
     "html",
     "dart",
-    "graphql"
+    "graphql",
+    "go"
   ]
 }
