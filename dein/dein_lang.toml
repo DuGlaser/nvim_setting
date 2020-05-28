@@ -23,6 +23,7 @@ let g:go_fmt_autosave = 0
 let g:go_mod_fmt_autosave = 0
 let g:go_gopls_enabled = 0
 let g:go_def_mapping_enabled = 0
+let g:go_template_autocreate = 0
 '''
 
 # ======================== 
@@ -46,7 +47,7 @@ repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]
 repo = 'tell-k/vim-browsereload-mac'
-hook_add= '''
+hook_add= ''' 
 let g:returnApp = "iTerm"
 nmap <Space>bc :ChromeReloadStart<CR>
 nmap <Space>bC :ChromeReloadStop<CR>

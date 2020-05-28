@@ -73,8 +73,6 @@ endfunction
 nmap <space>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <space>f  <Plug>(coc-format-selected)
-nmap <space>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!

@@ -60,7 +60,7 @@ repo = 'Rigellute/rigel'
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'tomtom/tcomment_vim'
+repo = 'tyru/caw.vim'
 
 [[plugins]]
 repo = 'vim-scripts/YankRing.vim'
@@ -149,18 +149,6 @@ repo = 'machakann/vim-sandwich'
 repo = 'junegunn/fzf'
 build = './install --all'
 marge = 0
-
-[[plugins]]
-repo = 'cocopon/vaffle.vim'
-hook_add = '''
-nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>
-  function! VaffleRenderCustomIcon(item)
-    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)
-  endfunction
-
-  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'
-let g:vaffle_show_hidden_files = 1
-'''
 
 [[plugins]]
 repo = 'tyru/columnskip.vim'
