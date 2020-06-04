@@ -16,7 +16,6 @@ let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/nvim/dein/dein_defx.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 0})
   " call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   call map(dein#check_clean(), "delete(v:val, 'rf')")
@@ -92,9 +91,6 @@ nnoremap <silent> <Space>l :<C-u>nohlsearch<CR><C-l>
 nnoremap x "_x
 nnoremap s "_s
 
-set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2
-
 function! s:set_vsearch()
   silent normal gv"zy
   let @/ = '\V' . substitute(escape(@z, '/\'), '\n', '\\n', 'g')
@@ -130,3 +126,5 @@ augroup END
 
 " kite
 let g:kite_supported_languages = ['python', 'javascript']
+set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2 
