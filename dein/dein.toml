@@ -160,3 +160,16 @@ nmap sk <Plug>(columnskip:nonblank:prev)
 omap sk <Plug>(columnskip:nonblank:prev)
 xmap sk <Plug>(columnskip:nonblank:prev)
 '''
+
+[[plugins]]	
+repo = 'cocopon/vaffle.vim'	
+hook_add = '''	
+nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>	
+  function! VaffleRenderCustomIcon(item)	
+    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)	
+  endfunction	
+  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'	
+let g:vaffle_show_hidden_files = 1	
+let g:vaffle_auto_cd = 1
+let g:vaffle_force_delete = 1
+'''	
