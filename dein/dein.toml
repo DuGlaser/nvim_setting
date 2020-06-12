@@ -3,7 +3,8 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim'] hook_add = '''
+depends = ['context_filetype.vim'] 
+hook_add = '''
 let g:context_filetype#search_offset = 100
 	let g:precious_enable_switchers = {
 	\	"vue" : {
