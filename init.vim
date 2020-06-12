@@ -68,6 +68,8 @@ highlight CursorLineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
 highlight SignColumn ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
+" yank highlight
+highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
 
 " キーバインド
 " <モード> [later][now]

@@ -3,8 +3,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim']
-hook_add = '''
+depends = ['context_filetype.vim'] hook_add = '''
 let g:context_filetype#search_offset = 100
 	let g:precious_enable_switchers = {
 	\	"vue" : {
@@ -66,6 +65,12 @@ repo = 'tyru/caw.vim'
 repo = 'vim-scripts/YankRing.vim'
 
 [[plugins]]
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+let g:highlightedyank_highlight_duration = 200
+'''
+
+[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
@@ -76,9 +81,6 @@ repo = 'easymotion/vim-easymotion'
 hook_add = '''
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap <Space>s <Plug>(easymotion-s2)
-nmap <Space>g <Plug>(easymotion-sn)
-xmap <Space>g <Plug>(easymotion-sn)
-omap <Space>g <Plug>(easymotion-tn)
 '''
 
 [[plugins]]
@@ -115,6 +117,11 @@ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
+hook_add = '''
+nnoremap <silent><space>gs :<C-u>Gina status --opener="botright split"<CR>
+call gina#custom#command#alias('status', 'st')
+call gina#custom#command#alias('commit', 'ct')
+'''
 
 # ========================================
 

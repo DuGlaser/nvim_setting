@@ -99,10 +99,10 @@ let g:vue_pre_processors = 'detect_on_enter'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'peitalin/vim-jsx-typescript'
-
+# 
+# [[plugins]]
+# repo = 'peitalin/vim-jsx-typescript'
+# 
 [[plugins]]
 repo = 'mxw/vim-jsx'
 
@@ -110,7 +110,7 @@ repo = 'mxw/vim-jsx'
 repo = 'MaxMEllon/vim-jsx-pretty'
 hook_add = '''
 let g:vim_jsx_pretty_colorful_config = 1
-let g:vim_jsx_pretty_disable_tsx = 1
+" let g:vim_jsx_pretty_disable_tsx = 1
 '''
 
 [[plugins]]
