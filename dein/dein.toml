@@ -60,7 +60,7 @@ repo = 'Rigellute/rigel'
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'tyru/caw.vim'
+repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'vim-scripts/YankRing.vim'
