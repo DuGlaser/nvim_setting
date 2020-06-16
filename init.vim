@@ -126,7 +126,5 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
 
-" kite
-let g:kite_supported_languages = ['python', 'javascript']
-set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2 
+" coc-go
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
