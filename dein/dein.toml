@@ -184,3 +184,11 @@ let g:vaffle_show_hidden_files = 1
 let g:vaffle_auto_cd = 1
 let g:vaffle_force_delete = 1
 '''	
+
+[[plugins]]
+repo = 'zefei/vim-wintabs'
+hook_add = '''
+nmap <C-t><C-l> <plug>(wintabs_next)
+nmap <C-t><C-h> <plug>(wintabs_previous)
+nmap <C-t><C-p> <plug>(wintabs_close)
+'''
