@@ -109,12 +109,12 @@ let g:vue_pre_processors = 'detect_on_enter'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-# 
-# [[plugins]]
-# repo = 'peitalin/vim-jsx-typescript'
-# 
+
 [[plugins]]
-repo = 'mxw/vim-jsx'
+repo = 'othree/yajs.vim'
+
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
 
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
