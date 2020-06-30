@@ -158,3 +158,33 @@ let g:rufo_auto_formatting = 1
 # ========================
 # ------------------------
 
+# [ clang ] --------------
+# ========================
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+hook_add = '''
+autocmd FileType c ClangFormatAutoEnable
+autocmd FileType cpp ClangFormatAutoEnable
+autocmd FileType chh ClangFormatAutoEnable
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++20"}
+'''
+
+# ========================
+# ------------------------
+
+# ------------------------
+# [ c# ] =================
+[[plugins]]
+repo = "OmniSharp/omnisharp-vim"
+on_ft = ["cs"]
+build = "xbuild server/OmniSharp.sln"
+hook_add = '''
+let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_server_use_mono = 1
+'''
+# ========================
+# ------------------------
