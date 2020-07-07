@@ -1,3 +1,11 @@
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:ale_linters_explicit = 1
+'''
+
+
 # [ go ] -----------------
 # ======================== 
 [[plugins]]
@@ -184,7 +192,10 @@ on_ft = ["cs"]
 build = "xbuild server/OmniSharp.sln"
 hook_add = '''
 let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_server_use_mono = 1
+" let g:OmniSharp_server_use_mono = 1
+autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
+autocmd FileType cs nnoremap <C-m>n :OmniSharpRename<cr>
+autocmd FileType cs nnoremap <C-m><C-f> :OmniSharpCodeFormat<cr>
 '''
 # ========================
 # ------------------------
