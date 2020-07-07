@@ -59,7 +59,8 @@ syntax enable
 colorscheme rigel 
 set pumblend=15
 
-let g:loaded_matchparen=1
+" let g:loaded_matchparen=1
+highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
