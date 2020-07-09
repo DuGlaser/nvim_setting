@@ -50,11 +50,6 @@ repo = 'thinca/vim-quickrun'
 # [ HTML&CSS ] -----------
 # ======================== 
 [[plugins]]
-repo = 'prettier/vim-prettier'
-build = 'yarn install'
-on_ft = ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
-
-[[plugins]]
 repo = 'cakebaker/scss-syntax.vim'
 
 [[plugins]]

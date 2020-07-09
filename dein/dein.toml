@@ -155,12 +155,6 @@ repo = 'kana/vim-textobj-entire'
 [[plugins]]
 repo = 'machakann/vim-sandwich'
 # ========================================
-
-[[plugins]]
-repo = 'junegunn/fzf'
-build = './install --all'
-marge = 0
-
 [[plugins]]
 repo = 'tyru/columnskip.vim'
 hook_add = '''
