@@ -17,13 +17,6 @@ let g:context_filetype#search_offset = 100
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
-repo = "neoclide/coc.nvim"
-merge = 0
-rev = "release"
-build = './install.sh nightly'
-hook_add='source ~/.config/nvim/coc-options.vim'
-
-[[plugins]]
 repo = 'mattn/sonictemplate-vim'
 
 [[plugins]] 
