@@ -156,6 +156,11 @@ repo = 'kana/vim-textobj-entire'
 repo = 'machakann/vim-sandwich'
 # ========================================
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+marge = 0
+
+[[plugins]]
 repo = 'tyru/columnskip.vim'
 hook_add = '''
 nmap sj <Plug>(columnskip:nonblank:next)
