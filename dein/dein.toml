@@ -14,6 +14,15 @@ let g:context_filetype#search_offset = 100
 '''
 
 [[plugins]]
+repo = 'neovim/nvim-lsp'
+hook_add = '''
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-K> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> GD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+'''
+
+[[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
@@ -184,3 +193,6 @@ nmap <C-t><C-l> <plug>(wintabs_next)
 nmap <C-t><C-h> <plug>(wintabs_previous)
 nmap <C-t><C-p> <plug>(wintabs_close)
 '''
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
