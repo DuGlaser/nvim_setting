@@ -1,0 +1,45 @@
+{	
+  "suggest.noselect": false,	
+  "suggest.triggerAfterInsertEnter": true,	
+  "suggest.acceptSuggestionOnCommitCharacter": true,	
+  "suggest.minTriggerInputLength": 1,	
+  "suggest.preferCompleteThanJumpPlaceholder": true,	
+  "tsserver.enableJavascript": true,	
+  "go.goplsOptions": {	
+    "completeUnimported": true	
+  },	
+  "eslint.enable": true,	
+  "eslint.autoFixOnSave": true,	
+  "solargraph.autoformat": true,	
+  "vetur.validation.template": false,	
+  "vetur.format.options.tabSize": 4,	
+  "vetur.format.scriptInitialIndent": true,	
+  "vetur.format.styleInitialIndent": true,	
+  "vetur.completion.autoImport": true,	
+  "vetur.useWorkspaceDependencies": true,	
+  "prettier.singleQuote": true,	
+  "eslint.filetypes": [	
+    "javascript",	
+    "javascript.jsx",	
+    "vue",	
+    "typescript",	
+    "typescriptreact",	
+    "javascriptreact",	
+    "typescript.tsx"	
+  ],	
+  "coc.preferences.formatOnSaveFiletypes": [	
+    "css",	
+    "scss",	
+    "java",	
+    "json",	
+    "rust",	
+    "javascript",	
+    "javascriptreact",	
+    "typescript",	
+    "typescriptreact",	
+    "html",	
+    "dart",	
+    "graphql",	
+    "go"	
+  ]	
+}

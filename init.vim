@@ -128,6 +128,8 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
 
+" coc-go	
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " いつの日か使うと信じて...
 " nvim-lsp setting

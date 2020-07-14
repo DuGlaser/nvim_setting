@@ -13,6 +13,13 @@ let g:context_filetype#search_offset = 100
 	\}
 '''
 
+[[plugins]]	
+repo = "neoclide/coc.nvim"	
+merge = 0	
+rev = "release"	
+build = './install.sh nightly'	
+hook_add='source ~/.config/nvim/coc-options.vim'
+
 # [[plugins]]
 # repo = 'neovim/nvim-lsp'
 # hook_add = '''
