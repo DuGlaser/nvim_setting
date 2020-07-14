@@ -17,7 +17,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
+  " call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -129,13 +129,13 @@ augroup auto_comment_off
 augroup END
 
 
+" いつの日か使うと信じて...
 " nvim-lsp setting
-:lua << END
-  require'nvim_lsp'.tsserver.setup{}
-  require'nvim_lsp'.cssls.setup{}
-  require'nvim_lsp'.ccls.setup{}
-  require'nvim_lsp'.html.setup{}
-  require'nvim_lsp'.rust_analyzer.setup{}
-  require'nvim_lsp'.solargraph.setup{}
-  require'nvim_lsp'.vuels.setup{}
-END
+" :lua << END
+"   require'nvim_lsp'.tsserver.setup{}
+"   require'nvim_lsp'.cssls.setup{}
+"   require'nvim_lsp'.ccls.setup{}
+"   require'nvim_lsp'.html.setup{}
+"   require'nvim_lsp'.solargraph.setup{}
+"   require'nvim_lsp'.vuels.setup{}
+" END
