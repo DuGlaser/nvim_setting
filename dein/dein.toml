@@ -129,6 +129,7 @@ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 repo = 'lambdalisue/gina.vim'
 hook_add = '''
 nnoremap <silent><space>gs :<C-u>Gina status --opener="botright split"<CR>
+nnoremap <silent><space>ct :<C-u>Gina commit<CR>
 call gina#custom#command#alias('status', 'st')
 call gina#custom#command#alias('commit', 'ct')
 '''
@@ -200,6 +201,3 @@ nmap <C-t><C-l> <plug>(wintabs_next)
 nmap <C-t><C-h> <plug>(wintabs_previous)
 nmap <C-t><C-p> <plug>(wintabs_close)
 '''
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
