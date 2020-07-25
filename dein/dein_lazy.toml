@@ -1,27 +1,50 @@
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
 
+# hook_source = '''
+#   inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+#   inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+#   inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+#   let g:deoplete#enable_at_startup = 1
+#   let g:deoplete#enable_camel_case = 0
+#   let g:deoplete#enable_ignore_case = 0
+#   call deoplete#custom#option({
+#         \ 'auto_complete_delay': 0,
+#         \ 'min_pattern_length': 1,
+#         \ 'refresh_always': v:false,
+#         \ 'smart_case': v:true,
+#         \ 'camel_case': v:true,
+#         \ 'skip_chars': ['(',')','{','}','[',']']
+#         \})
+# '''
+# on_i = 1
+
+
+
+# [[plugins]]
+# repo = 'Shougo/deoplete-lsp'
+# on_i = 1
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
 hook_source = '''
-  inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-  inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-  inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_camel_case = 0
-  let g:deoplete#enable_ignore_case = 0
-  call deoplete#custom#option({
-        \ 'auto_complete_delay': 0,
-        \ 'min_pattern_length': 1,
-        \ 'refresh_always': v:false,
-        \ 'smart_case': v:true,
-        \ 'camel_case': v:true,
-        \ 'skip_chars': ['(',')','{','}','[',']']
-        \})
+  let g:UltiSnipsEditSplit="vertical"
+  let g:UltiSnipsJumpForwardTrigger="<tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+  let g:UltiSnipsExpandTrigger="<nop>"
+  let g:ulti_expand_or_jump_res = 0
+  function! <SID>ExpandSnippetOrReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+      return snippet
+    else
+      return "\<CR>"
+    endif
+  endfunction
+  inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
 '''
 on_i = 1
 
-
-
 [[plugins]]
-repo = 'Shougo/deoplete-lsp'
+repo = 'honza/vim-snippets'
 on_i = 1
-
