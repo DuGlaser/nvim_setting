@@ -18,6 +18,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
+  call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -130,6 +131,48 @@ augroup END
 
 " coc-go	
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+      enable = true,
+      disable = {
+        'tsx',
+        'jsx',
+        'lua',
+        'javascript',
+        'typescript',
+        'go',
+        'ruby',
+        'html',
+        'css',
+        'vue',
+      }
+    },
+    incremental_selection = {
+      enable = true,
+    },
+    refactor = {
+      highlight_definitions = {
+        enable = false,
+      },
+      highlight_current_scope = {
+        enable = false,
+      },
+      smart_rename = {
+        enable = false,
+      },
+      navigation = {
+        enable = false,
+      }
+    },
+    textobjects = { -- syntax-aware textobjects
+    enable = true,
+    disable = {'tsx','jsx'}
+    },
+    ensure_installed = 'all' -- one of 'all', 'language', or a list of languages
+}
+EOF
 
 " いつの日か使うと信じて...
 " nvim-lsp setting
