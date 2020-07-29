@@ -4,6 +4,7 @@ hook_add = '''
 let g:ale_linters = { 'cs': ['OmniSharp'] }
 let g:ale_linters_explicit = 1
 '''
+on_ft = ['cs']
 
 
 # [ go ] -----------------
@@ -33,6 +34,7 @@ let g:go_gopls_enabled = 0
 let g:go_def_mapping_enabled = 0
 let g:go_template_autocreate = 0
 '''
+on_ft = ['go']
 
 # ======================== 
 # ------------------------ 
@@ -42,6 +44,7 @@ let g:go_template_autocreate = 0
 # ======================== 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+on_ft = ['java']
 
 # ======================== 
 # ------------------------ 
@@ -51,12 +54,15 @@ repo = 'thinca/vim-quickrun'
 # ======================== 
 [[plugins]]
 repo = 'cakebaker/scss-syntax.vim'
+on_ft = ['html','css']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
+on_ft = ['html','css']
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
+on_ft = ['html','css']
 
 [[plugins]]
 repo = 'tell-k/vim-browsereload-mac'
@@ -73,12 +79,14 @@ nmap <Space>bO :OperaReloadStop<CR>
 nmap <Space>ba :AllBrowserReloadStart<CR>
 nmap <Space>bA :AllBrowserReloadStop<CR>
 '''
+on_ft = ['html','css']
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 hook_add = '''
 command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
 '''
+on_ft = ['html','css']
 # ========================
 # ------------------------ 
 
@@ -87,20 +95,23 @@ command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
 # ========================
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
+on_ft = ['dart']
 
 [[plugins]]
 repo = 'thosakwe/vim-flutter'
+on_ft = ['dart']
 # ========================
 # ------------------------ 
 
 
 # [ markdown ] -----------
 # ======================== 
- [[plugins]]
- repo = 'previm/previm'
- hook_add = '''
- let g:previm_open_cmd = 'open -a Google\ Chrome'
- '''
+[[plugins]]
+repo = 'previm/previm'
+hook_add = '''
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+'''
+on_ft = ['md']
 # ========================
 # ------------------------ 
 
@@ -112,6 +123,7 @@ repo = 'posva/vim-vue'
 hook_add = '''
 let g:vue_pre_processors = 'detect_on_enter'
 '''
+on_ft = ['vue']
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
@@ -147,6 +159,7 @@ repo = 'rust-lang/rust.vim'
 hook_add = '''
 let g:rustfmt_autosave = 1
 '''
+on_ft = ['rust']
 # ========================
 # ------------------------
 
@@ -155,12 +168,15 @@ let g:rustfmt_autosave = 1
 # ========================
 [[plugins]]
 repo = 'tpope/vim-rails'
+on_ft = ['ruby']
 
 [[plugins]]
 repo = 'ruby-formatter/rufo-vim'
 hook_add = '''
 let g:rufo_auto_formatting = 1
 '''
+
+on_ft = ['ruby']
 # ========================
 # ------------------------
 
