@@ -145,6 +145,3 @@ function! s:cocActionsOpenFromSelected(type) abort
 endfunction
 xmap <silent> <space>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
 nmap <silent> <space>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
-
-" coc-snippets
-imap <C-l> <Plug>(coc-snippets-expand)
