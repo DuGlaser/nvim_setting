@@ -32,9 +32,6 @@ hook_add='source ~/.config/nvim/coc-options.vim'
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
-[[plugins]]
-repo = 'mattn/sonictemplate-vim'
-
 [[plugins]] 
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
