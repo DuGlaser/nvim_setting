@@ -111,7 +111,7 @@ repo = 'previm/previm'
 hook_add = '''
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 '''
-on_ft = ['md']
+on_ft = ['markdown']
 # ========================
 # ------------------------ 
 
@@ -127,12 +127,15 @@ on_ft = ['vue']
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript','tsx']
 
 [[plugins]]
 repo = 'othree/yajs.vim'
+on_ft = ['typescript','javascript','jsx','tsx']
 
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
+on_ft = ['typescript','javascript','jsx','tsx']
 
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
@@ -140,6 +143,7 @@ hook_add = '''
 let g:vim_jsx_pretty_colorful_config = 1
 " let g:vim_jsx_pretty_disable_tsx = 1
 '''
+on_ft = ['typescript','javascript','jsx','tsx']
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
@@ -148,6 +152,7 @@ set conceallevel=1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 '''
+on_ft = ['typescript','javascript','jsx','tsx']
 # ======================== 
 # ------------------------ 
 
