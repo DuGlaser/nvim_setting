@@ -19,6 +19,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
   call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
+  call dein#add('morhetz/gruvbox')
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -58,18 +59,22 @@ let g:AutoClosePreserveDotReg = 0
 " colorscheme
 set termguicolors
 syntax enable 
-colorscheme rigel 
+" colorscheme rigel 
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_invert_selection=0
+colo gruvbox
 set pumblend=15
 
 " let g:loaded_matchparen=1
-highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
+" highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
 highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
-highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-highlight CursorLineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-highlight SignColumn ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
+" highlight NonText ctermbg=NONE guibg=NONE
+" highlight SpecialKey ctermbg=NONE guibg=NONE
+" highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
+" highlight CursorLineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
+" highlight SignColumn ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
+" highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
 " yank highlight
 highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
