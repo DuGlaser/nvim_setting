@@ -2,7 +2,6 @@ if !&compatible
   set nocompatible
 endif
 
-" dein自体の自動インストール
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_dir = s:cache_home . '/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -11,7 +10,6 @@ if !isdirectory(s:dein_repo_dir)
 endif
 
 let &runtimepath = s:dein_repo_dir .",". &runtimepath
-" プラグイン読み込み＆キャッシュ作成
 let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
@@ -19,12 +17,12 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
   call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
-  call dein#add('morhetz/gruvbox')
+  call dein#add('sainnhe/gruvbox-material')
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
 endif
-" 不足プラグインの自動インストール
+
 if dein#check_install()
   call dein#install()
 endif
@@ -56,19 +54,26 @@ set signcolumn=yes
 let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
+
+
+
 " colorscheme
-set termguicolors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 syntax enable 
-" colorscheme rigel 
-colorscheme gruvbox
+
 set background=dark
-let g:gruvbox_invert_selection=0
-colo gruvbox
-set pumblend=15
+" let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_palette = 'original'
+colorscheme gruvbox-material
 
 " let g:loaded_matchparen=1
 " highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
-highlight Normal ctermbg=NONE guibg=NONE
+" highlight Normal ctermbg=NONE guibg=NONE
 " highlight NonText ctermbg=NONE guibg=NONE
 " highlight SpecialKey ctermbg=NONE guibg=NONE
 " highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
@@ -79,8 +84,8 @@ highlight Normal ctermbg=NONE guibg=NONE
 " yank highlight
 highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
 
-" キーバインド
-" <モード> [later][now]
+
+
 let mapleader = "\<Space>"
 noremap ; : 
 nnoremap <C-h> gT 
@@ -105,19 +110,17 @@ function! s:set_vsearch()
   silent normal gv"zy
   let @/ = '\V' . substitute(escape(@z, '/\'), '\n', '\\n', 'g')
 endfunction
-" node_moduleの設定
-" let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+
+
+
+" node setting
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
-" Pythonの設定
+" Python setting
 let g:python_host_prog = expand('/usr/bin/python2')
 
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
-" Golang
-let g:sonictemplate_vim_template_dir = [
-\ '~/.config/nvim/template',
-\]
 
 " vim-devicons
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
@@ -137,6 +140,8 @@ augroup END
 " coc-go	
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
+
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
     highlight = {
@@ -150,6 +155,7 @@ require'nvim-treesitter.configs'.setup {
         'go',
         'ruby',
         'html',
+        'c_sharp',
         'css',
         'vue',
       }
