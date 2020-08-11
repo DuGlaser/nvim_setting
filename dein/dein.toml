@@ -41,13 +41,14 @@ repo = 'christoomey/vim-tmux-navigator'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+
 hook_add = '''
 let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
-      \ 'colorscheme': 'rigel'
       \ }
+let g:lightline.colorscheme = 'gruvbox_material'
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
