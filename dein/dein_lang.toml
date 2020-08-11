@@ -127,15 +127,15 @@ on_ft = ['vue']
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript','tsx']
+on_ft = ['typescript','tsx','typescriptreact']
 
 [[plugins]]
 repo = 'othree/yajs.vim'
-on_ft = ['typescript','javascript','jsx','tsx']
+on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
 
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
-on_ft = ['typescript','javascript','jsx','tsx']
+on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
 
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
@@ -143,7 +143,7 @@ hook_add = '''
 let g:vim_jsx_pretty_colorful_config = 1
 " let g:vim_jsx_pretty_disable_tsx = 1
 '''
-on_ft = ['typescript','javascript','jsx','tsx']
+on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
@@ -152,7 +152,7 @@ set conceallevel=1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 '''
-on_ft = ['typescript','javascript','jsx','tsx']
+on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
 # ======================== 
 # ------------------------ 
 
