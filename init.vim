@@ -55,9 +55,7 @@ let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
 
-
-
-" colorscheme
+" colorscheme setting
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -67,7 +65,6 @@ endif
 syntax enable 
 
 set background=dark
-" let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_palette = 'original'
 colorscheme gruvbox-material
 
@@ -84,8 +81,7 @@ colorscheme gruvbox-material
 " yank highlight
 highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
 
-
-
+" Key map setting
 let mapleader = "\<Space>"
 noremap ; : 
 nnoremap <C-h> gT 
@@ -111,8 +107,6 @@ function! s:set_vsearch()
   let @/ = '\V' . substitute(escape(@z, '/\'), '\n', '\\n', 'g')
 endfunction
 
-
-
 " node setting
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
@@ -120,7 +114,6 @@ let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 let g:python_host_prog = expand('/usr/bin/python2')
 
 let g:python3_host_prog = expand('/usr/local/bin/python3')
-
 
 " vim-devicons
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
@@ -140,8 +133,7 @@ augroup END
 " coc-go	
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
-
-
+" treesitter setting
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
     highlight = {
