@@ -61,10 +61,10 @@ endfunction
 '''
 
 [[plugins]]
-repo = 'Rigellute/rigel'
+repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
+repo = 'sainnhe/gruvbox-material'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
@@ -170,17 +170,6 @@ repo = 'machakann/vim-sandwich'
 repo = 'junegunn/fzf'
 build = './install --all'
 marge = 0
-
-[[plugins]]
-repo = 'tyru/columnskip.vim'
-hook_add = '''
-nmap sj <Plug>(columnskip:nonblank:next)
-omap sj <Plug>(columnskip:nonblank:next)
-xmap sj <Plug>(columnskip:nonblank:next)
-nmap sk <Plug>(columnskip:nonblank:prev)
-omap sk <Plug>(columnskip:nonblank:prev)
-xmap sk <Plug>(columnskip:nonblank:prev)
-'''
 
 [[plugins]]	
 repo = 'cocopon/vaffle.vim'	
