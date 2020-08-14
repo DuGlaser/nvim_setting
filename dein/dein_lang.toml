@@ -1,10 +1,20 @@
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
-let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:ale_linters = { 
+      \ 'cs': ['OmniSharp'],
+      \ 'typescriptreact': ['eslint'],
+      \ 'typescript': ['eslint'],
+      \ 'tsx': ['eslint'],
+      \ 'javascriptreact': ['eslint'],
+      \ 'javascript': ['eslint'],
+      \ 'jsx': ['eslint'],
+      \ }
 let g:ale_linters_explicit = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 '''
-on_ft = ['cs']
+on_ft = ['cs','typescript','typescriptreact','tsx','javascript','javascriptreact','javascriptreact']
 
 
 # [ go ] -----------------
