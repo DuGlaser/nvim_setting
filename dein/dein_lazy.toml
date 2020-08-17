@@ -35,7 +35,3 @@ hook_source = '''
   let g:UltiSnipsExpandTrigger="<C-/>"
 '''
 on_i = 1
-
-[[plugins]]
-repo = 'honza/vim-snippets'
-on_i = 1
