@@ -30,6 +30,9 @@ hook_add='source ~/.config/nvim/coc-options.vim'
 # '''
 
 [[plugins]]
+repo = 'itchyny/vim-parenmatch'
+
+[[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]] 
