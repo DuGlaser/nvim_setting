@@ -19,11 +19,12 @@
   "suggest.acceptSuggestionOnCommitCharacter": true,
   "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,
+  "typescript.preferences.importModuleSpecifier": "auto",
+  "typescript.preferences.importModuleSpecifierEnding": "auto",
   "tsserver.enableJavascript": true,
   "go.goplsOptions": {
     "completeUnimported": true
   },
-  "eslint.enable": true,
   "eslint.autoFixOnSave": true,
   "solargraph.autoformat": true,
   "vetur.validation.template": false,
@@ -36,10 +37,10 @@
   "eslint.filetypes": [
     "javascript",
     "javascript.jsx",
+    "javascriptreact",
     "vue",
     "typescript",
     "typescriptreact",
-    "javascriptreact",
     "typescript.tsx"
   ],
   "coc.preferences.formatOnSaveFiletypes": [
@@ -55,6 +56,7 @@
     "html",
     "dart",
     "graphql",
-    "go"
+    "go",
+    "cs"
   ]
 }

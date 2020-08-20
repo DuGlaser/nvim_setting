@@ -145,3 +145,6 @@ function! s:cocActionsOpenFromSelected(type) abort
 endfunction
 xmap <silent> <space>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
 nmap <silent> <space>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
+
+let g:coc_snippet_next = '<c-n>'
+let g:coc_snippet_prev = '<c-b>'
