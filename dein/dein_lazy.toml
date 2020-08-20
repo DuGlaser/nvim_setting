@@ -29,8 +29,8 @@
 repo = 'SirVer/ultisnips'
 hook_source = '''
   let g:UltiSnipsEditSplit="vertical"
-  let g:UltiSnipsJumpForwardTrigger="<tab>"
-  let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+  " let g:UltiSnipsJumpForwardTrigger="<C-n>"
+  " let g:UltiSnipsJumpBackwardTrigger="<C-b>"
   " Nop is not work
   let g:UltiSnipsExpandTrigger="<C-/>"
 '''
