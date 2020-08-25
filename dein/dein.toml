@@ -88,16 +88,6 @@ repo = 'tpope/vim-repeat'
 repo = 'rhysd/clever-f.vim'
 
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
-hook_add = '''
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap <Space>s <Plug>(easymotion-s2)
-nmap <Space>w <Plug>(easymotion-overwin-w)
-nmap <Space>j <Plug>(easymotion-j)
-nmap <Space>k <Plug>(easymotion-k)
-'''
-
-[[plugins]]
 repo = 'liuchengxu/vim-clap'
 hook_add = '''
 let g:clap_enable_icon = 1
