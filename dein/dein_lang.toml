@@ -230,3 +230,12 @@ autocmd FileType cs nnoremap <C-m><C-f> :OmniSharpCodeFormat<cr>
 '''
 # ========================
 # ------------------------
+
+
+# [ toml ] ---------------
+# ========================
+[[plugins]] 
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+# ========================
+# ------------------------
