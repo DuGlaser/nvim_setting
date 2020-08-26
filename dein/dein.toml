@@ -1,18 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim'] 
-hook_add = '''
-let g:context_filetype#search_offset = 100
-	let g:precious_enable_switchers = {
-	\	"vue" : {
-	\		"setfiletype" : 0
-	\	},
-	\}
-'''
-
+# LSP
 [[plugins]]	
 repo = "neoclide/coc.nvim"	
 merge = 0	
@@ -20,28 +9,25 @@ rev = "release"
 build = './install.sh nightly'	
 hook_add='source ~/.config/nvim/coc-options.vim'
 
-# [[plugins]]
-# repo = 'neovim/nvim-lsp'
-# hook_add = '''
-# nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-# nnoremap <silent> gd    <cmd>lua vim.lsp.buf.implementation()<CR>
-# nnoremap <silent> <c-K> <cmd>lua vim.lsp.buf.signature_help()<CR>
-# nnoremap <silent> gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-# '''
-
+# colorscheme
 [[plugins]]
-repo = 'itchyny/vim-parenmatch'
+repo = 'sainnhe/gruvbox-material'
 
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
+# filer
+[[plugins]]	
+repo = 'cocopon/vaffle.vim'	
+hook_add = '''	
+nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>	
+  function! VaffleRenderCustomIcon(item)	
+    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)	
+  endfunction	
+  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'	
+let g:vaffle_show_hidden_files = 1	
+let g:vaffle_auto_cd = 1
+let g:vaffle_force_delete = 1
+'''	
 
-[[plugins]] 
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
-[[plugins]]
-repo = 'christoomey/vim-tmux-navigator'
-
+# lightline
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
@@ -63,53 +49,38 @@ function! LightlineFilename()
 endfunction
 '''
 
+# devicons
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
+# fzf
 [[plugins]]
-repo = 'sainnhe/gruvbox-material'
+repo = 'junegunn/fzf'
+build = './install --all'
+marge = 0
 
+# [ filetype ] -------------------------
+# ======================================
 [[plugins]]
-repo = 'tpope/vim-commentary'
-
-[[plugins]]
-repo = 'vim-scripts/YankRing.vim'
-
-[[plugins]]
-repo = 'machakann/vim-highlightedyank'
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim'] 
 hook_add = '''
-let g:highlightedyank_highlight_duration = 200
+let g:context_filetype#search_offset = 100
+	let g:precious_enable_switchers = {
+	\	"vue" : {
+	\		"setfiletype" : 0
+	\	},
+	\}
 '''
 
 [[plugins]]
-repo = 'tpope/vim-repeat'
+repo = 'Shougo/context_filetype.vim'
+# ======================================
+# --------------------------------------
 
-[[plugins]]
-repo = 'rhysd/clever-f.vim'
 
-[[plugins]]
-repo = 'liuchengxu/vim-clap'
-hook_add = '''
-let g:clap_enable_icon = 1
-let g:clap_insert_mode_only = v:true
-nnoremap <silent><Space>cf 
-\ :<C-u>Clap files<CR>
-nnoremap <silent><Space>cg 
-\ :<C-u>Clap grep<CR>
-nnoremap <silent><Space>cb 
-\ :<C-u>Clap buffers<CR>
-'''
-
-[[plugins]]
-repo = 'chrisbra/Colorizer'
-
-[[plugins]]
-repo = 'thinca/vim-zenspace'
-hook_add = '''
-let g:zenspace#default_mode = 'on'
-'''
-
-# git ====================================
+# [ git ] ------------------------------
+# ======================================
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
@@ -128,9 +99,12 @@ call gina#custom#command#alias('status', 'st')
 call gina#custom#command#alias('commit', 'ct')
 '''
 
-# ========================================
+# ======================================
+# --------------------------------------
 
-# visual mode plugins ====================
+
+# [ text object ] ----------------------
+# ======================================
 [[plugins]]
 repo = 'terryma/vim-expand-region'
 hook_add = '''
@@ -158,25 +132,35 @@ repo = 'kana/vim-textobj-entire'
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
-# ========================================
+# ======================================
+# --------------------------------------
+
+
+# [ highlight ] ------------------------
+# ======================================
 [[plugins]]
-repo = 'junegunn/fzf'
-build = './install --all'
-marge = 0
+repo = 'itchyny/vim-parenmatch'
 
-[[plugins]]	
-repo = 'cocopon/vaffle.vim'	
-hook_add = '''	
-nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>	
-  function! VaffleRenderCustomIcon(item)	
-    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)	
-  endfunction	
-  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'	
-let g:vaffle_show_hidden_files = 1	
-let g:vaffle_auto_cd = 1
-let g:vaffle_force_delete = 1
-'''	
+[[plugins]]
+repo = 'chrisbra/Colorizer'
 
+[[plugins]]
+repo = 'thinca/vim-zenspace'
+hook_add = '''
+let g:zenspace#default_mode = 'on'
+'''
+
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+let g:highlightedyank_highlight_duration = 200
+'''
+# ======================================
+# --------------------------------------
+
+
+# [ keymap ] ---------------------------
+# ======================================
 [[plugins]]
 repo = 'zefei/vim-wintabs'
 hook_add = '''
@@ -184,3 +168,42 @@ nmap <C-t><C-l> <plug>(wintabs_next)
 nmap <C-t><C-h> <plug>(wintabs_previous)
 nmap <C-t><C-p> <plug>(wintabs_close)
 '''
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+hook_add = '''
+map <Space>s <Plug>(operator-replace)
+'''
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'vim-scripts/YankRing.vim'
+
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+
+[[plugins]]
+repo = 'liuchengxu/vim-clap'
+hook_add = '''
+let g:clap_enable_icon = 1
+let g:clap_insert_mode_only = v:true
+nnoremap <silent><Space>cf 
+\ :<C-u>Clap files<CR>
+nnoremap <silent><Space>cg 
+\ :<C-u>Clap grep<CR>
+nnoremap <silent><Space>cb 
+\ :<C-u>Clap buffers<CR>
+'''
+# ======================================
+# --------------------------------------
