@@ -16,7 +16,6 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
-  call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -99,7 +98,6 @@ xmap # <Space>:%s/<C-r>///g<Left><Left>
 inoremap <C-t> <Esc><Left>"zx"zpa
 nnoremap <silent> <Space>l :<C-u>nohlsearch<CR><C-l>
 nnoremap x "_x
-nnoremap s "_s
 
 function! s:set_vsearch()
   silent normal gv"zy
@@ -131,58 +129,3 @@ augroup END
 
 " coc-go	
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-
-" treesitter setting
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-    highlight = {
-      enable = true,
-      disable = {
-        'tsx',
-        'jsx',
-        'lua',
-        'javascript',
-        'typescript',
-        'go',
-        'ruby',
-        'html',
-        'c_sharp',
-        'css',
-        'vue',
-      }
-    },
-    incremental_selection = {
-      enable = true,
-    },
-    refactor = {
-      highlight_definitions = {
-        enable = false,
-      },
-      highlight_current_scope = {
-        enable = false,
-      },
-      smart_rename = {
-        enable = false,
-      },
-      navigation = {
-        enable = false,
-      }
-    },
-    textobjects = { -- syntax-aware textobjects
-    enable = true,
-    disable = {'tsx','jsx'}
-    },
-    ensure_installed = 'all' -- one of 'all', 'language', or a list of languages
-}
-EOF
-
-" いつの日か使うと信じて...
-" nvim-lsp setting
-" :lua << END
-"   require'nvim_lsp'.tsserver.setup{}
-"   require'nvim_lsp'.cssls.setup{}
-"   require'nvim_lsp'.ccls.setup{}
-"   require'nvim_lsp'.html.setup{}
-"   require'nvim_lsp'.solargraph.setup{}
-"   require'nvim_lsp'.vuels.setup{}
-" END
