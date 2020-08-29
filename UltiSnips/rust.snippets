@@ -6,6 +6,10 @@ snippet lem "Declare a variable"
 let mut ${1:name} = ${2:value}
 endsnippet
 
+snippet prl "println snippet"
+println!("{}", ${1});
+endsnippet
+
 snippet permutation "next permutation"
 pub trait LexicalPermutation {
     /// Return  if the slice was permuted,  if it is already
@@ -116,7 +120,7 @@ fn lcm(a: i32, b: i32) -> i32 {
 }
 endsnippet
 
-snippet GDG "最大公約数" 
+snippet GCD "最大公約数" 
 fn gdg(a: i32, b: i32) -> i32 {
     let mut a = a;
     let mut b = b;
