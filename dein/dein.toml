@@ -27,28 +27,6 @@ let g:vaffle_auto_cd = 1
 let g:vaffle_force_delete = 1
 '''	
 
-# lightline
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-
-hook_add = '''
-let g:lightline = {
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \ },
-      \ }
-let g:lightline.colorscheme = 'gruvbox_material'
-
-function! LightlineFilename()
-  let root = fnamemodify(get(b:, 'git_dir'), ':h')
-  let path = expand('%:p')
-  if path[:len(root)-1] ==# root
-    return path[len(root)+1:]
-  endif
-  return expand('%')
-endfunction
-'''
-
 # devicons
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
@@ -58,6 +36,57 @@ repo = 'ryanoasis/vim-devicons'
 repo = 'junegunn/fzf'
 build = './install --all'
 marge = 0
+
+# [ lightline ] ------------------------
+# ======================================
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+hook_add = '''
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox_material',
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
+      \ 'enable': {'tabline': 1},
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+      \ }
+
+let g:lightline#bufferline#shorten_path = 0
+
+nnoremap <silent> <C-t><C-p> :bdelete<CR>
+nnoremap <silent> <C-t><C-h> :bprev<CR>
+nnoremap <silent> <C-t><C-l> :bnext<CR>
+
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
+
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
+set showtabline=2
+'''
+
+[[plugins]]
+repo = 'mengelbrecht/lightline-bufferline'
+# ======================================
+# --------------------------------------
 
 # [ filetype ] -------------------------
 # ======================================
@@ -161,13 +190,6 @@ let g:highlightedyank_highlight_duration = 200
 
 # [ keymap ] ---------------------------
 # ======================================
-[[plugins]]
-repo = 'zefei/vim-wintabs'
-hook_add = '''
-nmap <C-t><C-l> <plug>(wintabs_next)
-nmap <C-t><C-h> <plug>(wintabs_previous)
-nmap <C-t><C-p> <plug>(wintabs_close)
-'''
 [[plugins]]
 repo = 'kana/vim-operator-user'
 
