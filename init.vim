@@ -31,6 +31,7 @@ if len(s:removed_plugins)>0
   call dein#recache_runtimepath()
 endif
 
+set cmdheight=1
 set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
 set number             
