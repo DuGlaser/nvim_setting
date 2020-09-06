@@ -206,10 +206,6 @@ repo = 'christoomey/vim-tmux-navigator'
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
-repo = 'vim-scripts/YankRing.vim'
-
-
-[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]

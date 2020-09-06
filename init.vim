@@ -113,11 +113,6 @@ let g:python_host_prog = expand('/usr/bin/python2')
 
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
-" vim-devicons
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-let g:webdevicons_enable_airline_statusline = 1
-
 " set filetype
 autocmd FileType vue syntax sync fromstart
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
