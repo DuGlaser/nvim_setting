@@ -193,7 +193,7 @@ nnoremap <silent><Space>cg
 nnoremap <silent><Space>cb 
 \ :<C-u>Clap buffers<CR>
 nnoremap <silent><Space>cy 
-\ :<C-u>Clap yank<CR>
+\ :<C-u>Clap yanks<CR>
 '''
 # ======================================
 # --------------------------------------
