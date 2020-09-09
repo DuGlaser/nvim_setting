@@ -196,3 +196,23 @@ impl UnionFind {
     }
 }
 endsnippet
+
+snippet padding "padding"
+let mut c: Vec<Vec<char>> = c;
+
+for i in 0..n {
+		let mut cc = c[i].clone();
+		cc.push('#');
+		cc.reverse();
+		cc.push('#');
+		cc.reverse();
+
+		c[i] = cc;
+}
+
+let top_bottom_padding: Vec<char> = vec!['#'; m + 2];
+c.push(top_bottom_padding.clone());
+c.reverse();
+c.push(top_bottom_padding.clone());
+c.reverse();
+endsnippet
