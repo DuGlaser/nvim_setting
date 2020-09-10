@@ -152,7 +152,7 @@ on_ft = ['typescript','tsx','typescriptreact']
 
 [[plugins]]
 repo = 'othree/yajs.vim'
-on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
+on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact', 'svelte']
 
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
@@ -173,7 +173,11 @@ set conceallevel=1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 '''
-on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
+on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact','svelte']
+
+[[plugins]]
+repo = 'evanleck/vim-svelte'
+on_ft = ['svelte']
 # ======================== 
 # ------------------------ 
 
