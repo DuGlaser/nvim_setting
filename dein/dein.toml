@@ -59,6 +59,8 @@ let g:lightline = {
       \   'left': [ ['buffers'] ],
       \   'right': [ ['close'] ]
       \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers'
       \ },
