@@ -19,7 +19,7 @@ if dein#load_state(s:dein_dir)
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
-  source ./dein.rc.vim
+  source ~/.config/nvim/dein.rc.vim
 endif
 
 if dein#check_install()
