@@ -70,7 +70,7 @@ on_ft = ['html','css']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html','css','jsx','tsx','javascriptreact','typescriptreact','vue']
+on_ft = ['html', 'css', 'javascript.jsx', 'typescript.tsx', 'vue']
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
@@ -152,11 +152,11 @@ on_ft = ['typescript','tsx','typescriptreact']
 
 [[plugins]]
 repo = 'othree/yajs.vim'
-on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact', 'svelte']
+on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx', 'svelte']
 
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
-on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
+on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescrpt.tsx', 'typescriptreact']
 
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
@@ -164,7 +164,7 @@ hook_add = '''
 let g:vim_jsx_pretty_colorful_config = 1
 " let g:vim_jsx_pretty_disable_tsx = 1
 '''
-on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact']
+on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescrpt.tsx', 'typescriptreact']
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
@@ -173,7 +173,7 @@ set conceallevel=1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 '''
-on_ft = ['javascript','typescript','jsx', 'tsx', 'javascriptreact', 'typescriptreact','svelte']
+on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx', 'svelte']
 
 [[plugins]]
 repo = 'evanleck/vim-svelte'
