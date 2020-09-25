@@ -15,7 +15,9 @@
     }
   },
   "suggest.noselect": false,
+  "suggest.echodocSupport": true,
   "suggest.triggerAfterInsertEnter": true,
+  "suggest.maxCompleteItemCount": 20,
   "suggest.acceptSuggestionOnCommitCharacter": true,
   "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,
@@ -48,7 +50,6 @@
     "scss",
     "java",
     "json",
-    "rust",
     "javascript",
     "javascriptreact",
     "typescript",
