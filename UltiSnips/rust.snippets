@@ -168,6 +168,7 @@ impl UnionFind {
         }
     }
 
+    /// xとyの木を結合する関数
     fn unite(&mut self, x: usize, y: usize) -> Result<(), ()> {
         let mut x = self.find(x);
         let mut y = self.find(y);
