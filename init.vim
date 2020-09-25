@@ -124,6 +124,3 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=r
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
-
-" coc-go	
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
