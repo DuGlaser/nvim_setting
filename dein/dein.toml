@@ -40,6 +40,9 @@ let g:echodoc#type = 'floating'
 highlight link EchoDocFloat Pmenu
 '''
 
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
 # [ lightline ] ------------------------
 # ======================================
 [[plugins]]
@@ -51,29 +54,12 @@ let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
-      \ 'enable': {'tabline': 1},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
       \ },
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
-      \ 'component_expand': {
-      \   'buffers': 'lightline#bufferline#buffers'
-      \ },
-      \ 'component_type': {
-      \   'buffers': 'tabsel'
       \ }
-      \ }
-
-let g:lightline#bufferline#shorten_path = 0
-
-nnoremap <silent> <C-t><C-p> :bdelete<CR>
-nnoremap <silent> <C-t><C-h> :bprev<CR>
-nnoremap <silent> <C-t><C-l> :bnext<CR>
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
@@ -83,13 +69,17 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-
-autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
-set showtabline=2
+'''
+[[plugins]]
+repo = 'zefei/vim-wintabs'
+hook_add = '''
+nmap <C-t><C-l> <plug>(wintabs_next)
+nmap <C-t><C-h> <plug>(wintabs_previous)
+nmap <C-t><C-p> <plug>(wintabs_close)
 '''
 
 [[plugins]]
-repo = 'mengelbrecht/lightline-bufferline'
+repo = 'zefei/vim-wintabs-powerline'
 # ======================================
 # --------------------------------------
 
