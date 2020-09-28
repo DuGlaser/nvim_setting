@@ -15,7 +15,6 @@
     }
   },
   "suggest.noselect": false,
-  "suggest.echodocSupport": true,
   "suggest.triggerAfterInsertEnter": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.acceptSuggestionOnCommitCharacter": true,
