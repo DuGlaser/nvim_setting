@@ -1,9 +1,55 @@
 [[plugins]]
+repo = 'neovim/nvim-lspconfig'
+hook_add = '''
+lua << END
+  local nvim_lsp = require'nvim_lsp'
+  local on_attach = function(client)
+    -- require'diagnostic'.on_attach()
+    require'completion'.on_attach()
+  end
+
+  nvim_lsp.tsserver.setup{}
+  nvim_lsp.gopls.setup{}
+  nvim_lsp.html.setup{}
+  nvim_lsp.cssls.setup{}
+  nvim_lsp.jsonls.setup{}
+  nvim_lsp.rust_analyzer.setup{}
+END
+
+let g:completion_enable_snippet = 'UltiSnips'
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent>K  <cmd>lua vim.lsp.buf.hover()<CR>
+'''
+
+[[plugins]]
+repo = 'nvim-lua/completion-nvim'
+hook_add = '''
+autocmd BufEnter * lua require'completion'.on_attach()
+
+set shortmess+=c
+set completeopt=menuone,noinsert
+set updatetime=500
+'''
+
+[[plugins]]
 repo = 'steelsojka/completion-buffers'
 hook_add = '''
 let g:completion_chain_complete_list = {
       \ 'default': [
-      \    {'complete_items': ['lsp']},
-      \    {'complete_items': ['buffers']},
+      \    {'complete_items': ['lsp', 'snippet', 'buffers']},
       \  ]}
+'''
+
+[[plugins]]
+repo = 'nvim-lua/diagnostic-nvim'
+hook_add = '''
+let g:diagnostic_insert_delay = 0
+
+autocmd BufEnter * lua require'diagnostic'.on_attach()
+autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+autocmd BufEnter * highlight LspDiagnosticsError ctermbg=167 guifg=#fb4934
+autocmd BufEnter * highlight LspDiagnosticsWarning ctermfg=214 guifg=#fabd2f
 '''
