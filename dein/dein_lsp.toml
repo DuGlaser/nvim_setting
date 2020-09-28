@@ -1,33 +1,6 @@
 [[plugins]]
-repo = 'neovim/nvim-lspconfig'
-hook_add = '''
-nnoremap <silent>gd    <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent>K     <cmd>lua vim.lsp.buf.hover()<CR>
-'''
-
-[[plugins]]
-repo = 'nvim-lua/completion-nvim'
-hook_add = '''
-let g:completion_enable_snippet = 'UltiSnips'
-let g:completion_enable_auto_popup = 1
-let g:completion_auto_change_source = 1
-autocmd BufEnter * lua require'completion'.on_attach()
-
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
-
-" Avoid showing message extra message when using completion
-set shortmess+=c
-'''
-
-[[plugins]]
 repo = 'steelsojka/completion-buffers'
 hook_add = '''
-
 let g:completion_chain_complete_list = {
       \ 'default': [
       \    {'complete_items': ['lsp']},
