@@ -124,3 +124,5 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=r
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
+
+autocmd BufWritePost * call coc#util#float_hide()
