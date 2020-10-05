@@ -3,6 +3,7 @@ repo = 'w0rp/ale'
 hook_add = '''
 let g:ale_linters = { 
       \ 'cs': ['OmniSharp'],
+      \ 'go': ['golint'],
       " \ 'typescriptreact': ['eslint'],
       " \ 'typescript': ['eslint'],
       " \ 'tsx': ['eslint'],
@@ -16,7 +17,7 @@ let g:ale_sign_warning = '--'
 let g:ale_fix_on_save = 1
 '''
 # on_ft = ['cs','typescript','typescriptreact','tsx','javascript','javascriptreact','javascriptreact']
-on_ft = ['cs']
+on_ft = ['cs','go']
 
 
 # [ java ] ---------------
