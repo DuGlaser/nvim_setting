@@ -190,5 +190,16 @@ nmap <C-t><C-p> <plug>(wintabs_close)
 
 [[plugins]]
 repo = 'zefei/vim-wintabs-powerline'
+
+[[plugins]]
+repo = 'tyru/columnskip.vim'
+hook_add = '''
+nmap sj <Plug>(columnskip:nonblank:next)
+omap sj <Plug>(columnskip:nonblank:next)
+xmap sj <Plug>(columnskip:nonblank:next)
+nmap sk <Plug>(columnskip:nonblank:prev)
+omap sk <Plug>(columnskip:nonblank:prev)
+xmap sk <Plug>(columnskip:nonblank:prev)
+'''
 # ======================================
 # --------------------------------------
