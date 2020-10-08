@@ -19,7 +19,6 @@ if dein#load_state(s:dein_dir)
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
-  source ~/.config/nvim/dein.rc.vim
 endif
 
 if dein#check_install()
@@ -31,6 +30,8 @@ if len(s:removed_plugins)>0
   call map(s:removed_plugins, "delete(v:val, 'rf')")
   call dein#recache_runtimepath()
 endif
+
+source ~/.config/nvim/dein.rc.vim
 
 set cmdheight=1
 set rtp+=/usr/local/opt/fzf
