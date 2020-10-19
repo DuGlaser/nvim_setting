@@ -16,6 +16,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
+  call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -127,3 +128,43 @@ augroup auto_comment_off
 augroup END
 
 autocmd BufWritePost * call coc#util#float_hide()
+
+" treesitter setting
+lua <<EOF	
+require'nvim-treesitter.configs'.setup {	
+    highlight = {	
+      enable = true,	
+      disable = {	
+        'lua',	
+        'ruby',	
+        'html',	
+        'toml',
+        'c_sharp',	
+        'css',	
+        'vue',	
+      }	
+    },	
+    incremental_selection = {	
+      enable = true,	
+    },	
+    refactor = {	
+      highlight_definitions = {	
+        enable = false,	
+      },	
+      highlight_current_scope = {	
+        enable = false,	
+      },	
+      smart_rename = {	
+        enable = false,	
+      },	
+      navigation = {	
+        enable = false,	
+      }	
+    },	
+    textobjects = { -- syntax-aware textobjects	
+    enable = true,	
+    disable = {'tsx','jsx'}	
+    },	
+    ensure_installed = 'all' -- one of 'all', 'language', or a list of languages	
+}	
+EOF	
