@@ -13,7 +13,7 @@ let g:ale_linters = {
       \ }
 let g:ale_linters_explicit = 1
 let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_warning = '⚠'
 let g:ale_fix_on_save = 1
 '''
 # on_ft = ['cs','typescript','typescriptreact','tsx','javascript','javascriptreact','javascriptreact']
@@ -107,42 +107,6 @@ on_ft = ['mdx']
 
 # [ js ] -----------------
 # ======================== 
-[[plugins]]
-repo = 'posva/vim-vue'
-hook_add = '''
-let g:vue_pre_processors = 'detect_on_enter'
-'''
-on_ft = ['vue']
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript','tsx','typescriptreact']
-
-[[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx', 'svelte']
-
-[[plugins]]
-repo = 'othree/es.next.syntax.vim'
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescrpt.tsx', 'typescriptreact']
-
-[[plugins]]
-repo = 'MaxMEllon/vim-jsx-pretty'
-hook_add = '''
-let g:vim_jsx_pretty_colorful_config = 1
-" let g:vim_jsx_pretty_disable_tsx = 1
-'''
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescrpt.tsx', 'typescriptreact']
-
-[[plugins]]
-repo = 'pangloss/vim-javascript'
-hook_add = '''
-set conceallevel=1
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
-'''
-on_ft = ['javascript', 'typescript', 'javascript.jsx', 'typescript.tsx', 'svelte']
-
 [[plugins]]
 repo = 'evanleck/vim-svelte'
 on_ft = ['svelte']
