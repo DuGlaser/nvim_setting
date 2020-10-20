@@ -53,6 +53,7 @@ set incsearch
 set inccommand=split
 set conceallevel=0
 set signcolumn=yes
+set cursorline
 let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
@@ -72,6 +73,7 @@ let g:gruvbox_material_palette = 'original'
 colorscheme gruvbox-material
 
 " let g:loaded_matchparen=1
+" highlight clear CursorLine
 " highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
 " highlight Normal ctermbg=NONE guibg=NONE
 " highlight NonText ctermbg=NONE guibg=NONE
