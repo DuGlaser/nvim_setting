@@ -25,6 +25,7 @@
   "go.goplsOptions": {
     "completeUnimported": true
   },
+  "tabnine.priority": 97,
   "eslint.autoFixOnSave": true,
   "solargraph.autoformat": true,
   "vetur.validation.template": false,
