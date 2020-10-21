@@ -19,6 +19,19 @@ let g:ale_fix_on_save = 1
 # on_ft = ['cs','typescript','typescriptreact','tsx','javascript','javascriptreact','javascriptreact']
 on_ft = ['cs','go']
 
+[[plugins]]
+repo = 'vim-test/vim-test'
+hook_add = '''
+let test#go#runner = 'gotest'
+tmap <C-o> <C-\><C-n>
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+'''
+on_ft = ['go']
 
 # [ java ] ---------------
 # ======================== 
