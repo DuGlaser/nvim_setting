@@ -13,23 +13,12 @@ hook_add='source ~/.config/nvim/coc-options.vim'
 [[plugins]]
 repo = 'sainnhe/gruvbox-material'
 
-# filer
-[[plugins]]	
-repo = 'cocopon/vaffle.vim'	
-hook_add = '''	
-nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>	
-  function! VaffleRenderCustomIcon(item)	
-    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)	
-  endfunction	
-  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'	
-let g:vaffle_show_hidden_files = 1	
-let g:vaffle_auto_cd = 1
-let g:vaffle_force_delete = 1
-'''	
-
-# devicons
+# neovim #12587
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
+repo = 'antoinemadec/FixCursorHold.nvim'
+hook_add = '''
+let g:cursorhold_updatetime = 100
+'''
 
 # fzf
 [[plugins]]
