@@ -58,7 +58,7 @@ cocのプラグインごとの設定をしています。
 benchmark with <a href="https://github.com/rhysd/vim-startuptime">vim-startuptime</a>
 
 ```
-Total Average: 172.232200 msec
-Total Max:     232.473000 msec
-Total Min:     158.428000 msec
+Total Average: 190.093400 msec
+Total Max:     218.034000 msec
+Total Min:     177.577000 msec
 ```
