@@ -55,6 +55,7 @@ set inccommand=split
 set conceallevel=0
 set signcolumn=yes
 set cursorline
+set splitright
 let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
@@ -97,6 +98,7 @@ noremap <Space>i %
 tnoremap <Esc> <C-\><C-n>
 nmap s <Nop>
 xmap s <Nop>
+nmap sv :vsplit <CR><C-w>w<plug>(wintabs_close)<C-w>w
 
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
 nmap # <Space><Space>:%s/<C-r>///g<Left><Left>
