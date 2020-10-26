@@ -17,6 +17,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein_fern.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
+  call dein#add('neoclide/coc.nvim', { 'merged': 0, 'build': 'yarn install --frozen-lockfile' })
   call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
@@ -34,6 +35,7 @@ if len(s:removed_plugins)>0
 endif
 
 source ~/.config/nvim/dein.rc.vim
+source ~/.config/nvim/coc-options.vim
 
 set cmdheight=1
 set rtp+=/usr/local/opt/fzf

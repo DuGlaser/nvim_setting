@@ -1,14 +1,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# LSP
-[[plugins]]	
-repo = "neoclide/coc.nvim"	
-merge = 0	
-rev = "release"	
-build = './install.sh nightly'	
-hook_add='source ~/.config/nvim/coc-options.vim'
-
 # colorscheme
 [[plugins]]
 repo = 'sainnhe/gruvbox-material'
@@ -40,7 +32,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
-      \ 'enable': {'tabline': 1},
+      \ 'enable': {'tabline': 0},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
       \ },

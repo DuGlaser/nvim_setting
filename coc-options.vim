@@ -143,6 +143,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 function! s:cocActionsOpenFromSelected(type) abort
   execute 'CocCommand actions.open ' . a:type
 endfunction
+nmap <silent> <space>ca :<C-u>CocAction<CR>
 xmap <silent> <space>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
 nmap <silent> <space>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
 
