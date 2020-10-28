@@ -125,38 +125,38 @@ autocmd BufWritePost * call coc#util#float_hide()
 " treesitter setting
 lua <<EOF	
 require'nvim-treesitter.configs'.setup {	
-    highlight = {	
-      enable = true,	
-      disable = {	
-        'lua',	
-        'ruby',	
-        'html',	
-        'toml',
-        'c_sharp',	
-        'css',	
-        'vue',	
-      }	
-    },	
-    incremental_selection = {	
-      enable = true,	
-    },	
-    refactor = {	
-      highlight_definitions = {	
-        enable = false,	
-      },	
-      highlight_current_scope = {	
-        enable = false,	
-      },	
-      smart_rename = {	
-        enable = false,	
-      },	
-      navigation = {	
-        enable = false,	
-      }	
-    },	
-    textobjects = { -- syntax-aware textobjects	
+  highlight = {	
     enable = true,	
+    disable = {	
+      'lua',	
+      'ruby',	
+      'html',	
+      'toml',
+      'c_sharp',	
+      'css',	
+      'vue',	
+    }	
+  },	
+  incremental_selection = {	
+    enable = true,	
+  },	
+  refactor = {	
+    highlight_definitions = {	
+      enable = false,	
     },	
-    ensure_installed = 'maintained' -- one of 'all', 'language', or a list of languages	
+    highlight_current_scope = {	
+      enable = false,	
+    },	
+    smart_rename = {	
+      enable = false,	
+    },	
+    navigation = {	
+      enable = false,	
+    }	
+  },	
+  textobjects = { -- syntax-aware textobjects	
+    enable = true,
+  },
+  ensure_installed = 'maintained' -- one of 'all', 'language', or a list of languages	
 }	
 EOF	
