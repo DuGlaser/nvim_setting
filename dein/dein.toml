@@ -209,3 +209,25 @@ xmap sk <Plug>(columnskip:nonblank:prev)
 '''
 # ======================================
 # --------------------------------------
+
+
+# [ text object ] ----------------------
+# ======================================
+[[plugins]]
+repo = 'bkad/CamelCaseMotion'
+hook_add = '''
+omap <silent> ,w <Plug>CamelCaseMotion_iw
+xmap <silent> ,w <Plug>CamelCaseMotion_iw
+omap <silent> ,b <Plug>CamelCaseMotion_ib
+xmap <silent> ,b <Plug>CamelCaseMotion_ib
+omap <silent> ,e <Plug>CamelCaseMotion_ie
+xmap <silent> ,e <Plug>CamelCaseMotion_ie
+map <silent> W <Plug>CamelCaseMotion_w
+map <silent> B <Plug>CamelCaseMotion_b
+map <silent> E <Plug>CamelCaseMotion_e
+'''
+
+[[plugins]]
+repo = 'romgrk/equal.operator'
+# ======================================
+# --------------------------------------
