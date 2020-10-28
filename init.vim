@@ -62,20 +62,6 @@ let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
 
-" colorscheme setting
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-syntax enable 
-filetype plugin indent on
-
-set background=dark
-let g:gruvbox_material_palette = 'original'
-colorscheme gruvbox-material
-
 " let g:loaded_matchparen=1
 " highlight clear CursorLine
 " highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
@@ -170,8 +156,7 @@ require'nvim-treesitter.configs'.setup {
     },	
     textobjects = { -- syntax-aware textobjects	
     enable = true,	
-    disable = {'tsx','jsx'}	
     },	
-    ensure_installed = 'all' -- one of 'all', 'language', or a list of languages	
+    ensure_installed = 'maintained' -- one of 'all', 'language', or a list of languages	
 }	
 EOF	
