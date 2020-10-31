@@ -120,8 +120,6 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
 
-autocmd BufWritePost * call coc#util#float_hide()
-
 " treesitter setting
 lua <<EOF	
 require'nvim-treesitter.configs'.setup {	
