@@ -17,7 +17,7 @@
   "suggest.noselect": false,
   "suggest.triggerAfterInsertEnter": true,
   "suggest.acceptSuggestionOnCommitCharacter": true,
-  "suggest.minTriggerInputLength": 2,
+  "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "typescript.preferences.importModuleSpecifier": "auto",
   "typescript.preferences.importModuleSpecifierEnding": "auto",
@@ -25,6 +25,7 @@
   "go.goplsOptions": {
     "completeUnimported": true
   },
+  "go.checkForUpdates": "ask",
   "tabnine.priority": 97,
   "eslint.autoFixOnSave": true,
   "solargraph.autoformat": true,
