@@ -229,5 +229,14 @@ map <silent> E <Plug>CamelCaseMotion_e
 
 [[plugins]]
 repo = 'romgrk/equal.operator'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'sgur/vim-textobj-parameter'
+hook_add = '''
+let g:vim_textobj_parameter_mapping = ','
+'''
 # ======================================
 # --------------------------------------
