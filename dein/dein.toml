@@ -2,21 +2,21 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'sainnhe/gruvbox-material'
+repo = 'morhetz/gruvbox'
 hook_add = '''
-" colorscheme setting
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+" if exists('+termguicolors')
+"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"   set termguicolors
+" endif
 
+set termguicolors
 syntax enable 
 filetype plugin indent on
 
-set background=dark
-let g:gruvbox_material_palette = 'original'
-colorscheme gruvbox-material
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_invert_selection= 0
+colorscheme gruvbox
 '''
 
 # [[plugins]]
@@ -53,7 +53,7 @@ repo = 'itchyny/lightline.vim'
 
 hook_add = '''
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox_material',
+      \ 'colorscheme': 'gruvbox',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
