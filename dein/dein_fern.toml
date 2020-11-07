@@ -8,7 +8,6 @@ function! s:init_fern() abort
   nmap <buffer> <CR> <Plug>(fern-my-open-expand-collapse)
   nmap <buffer><nowait> < <Plug>(fern-action-leave)
   nmap <buffer><nowait> > <Plug>(fern-action-enter)
-  nmap <buffer> # <Plug>(fern-action-project-top:reveal)
 endfunction
 
 augroup fern-custom
@@ -19,10 +18,6 @@ augroup END
 
 [[plugins]]
 repo = 'lambdalisue/fern-hijack.vim'
-depends = ['fern.vim']
-
-[[plugins]]
-repo = 'lambdalisue/fern-mapping-project-top.vim'
 depends = ['fern.vim']
 
 [[plugins]]
