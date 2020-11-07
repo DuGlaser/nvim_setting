@@ -41,7 +41,7 @@ let g:cursorhold_updatetime = 100
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
-marge = 0
+marged = 0
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
