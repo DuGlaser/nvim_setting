@@ -37,6 +37,8 @@ endif
 source ~/.config/nvim/dein.rc.vim
 source ~/.config/nvim/coc-options.vim
 
+set fileformat=unix
+set fileformats=unix,dos,mac
 set cmdheight=1
 set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
