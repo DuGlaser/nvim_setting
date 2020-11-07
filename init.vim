@@ -17,7 +17,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein_fern.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
-  call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
+  call dein#add('neoclide/coc.nvim', { 'merged': 0 })
   call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
@@ -62,17 +62,6 @@ let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
 
-" let g:loaded_matchparen=1
-" highlight clear CursorLine
-" highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
-" highlight Normal ctermbg=NONE guibg=NONE
-" highlight NonText ctermbg=NONE guibg=NONE
-" highlight SpecialKey ctermbg=NONE guibg=NONE
-" highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-" highlight CursorLineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-" highlight SignColumn ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-" highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
 " yank highlight
 highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
 
@@ -112,8 +101,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " set filetype
 autocmd FileType vue syntax sync fromstart
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 augroup auto_comment_off
     autocmd!
     autocmd BufEnter * setlocal formatoptions-=r
