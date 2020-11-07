@@ -39,6 +39,7 @@ source ~/.config/nvim/coc-options.vim
 
 set fileformat=unix
 set fileformats=unix,dos,mac
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp
 set cmdheight=1
 set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
