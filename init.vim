@@ -62,17 +62,10 @@ let g:vim_json_syntax_conceal = 0
 
 let g:AutoClosePreserveDotReg = 0
 
-" yank highlight
-highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
-
 " Key map setting
 let mapleader = "\<Space>"
 noremap ; : 
-nnoremap <C-h> gT 
-nnoremap dm) vmzi)o`zod
-nnoremap <C-l> gt
 noremap <Space>i %
-tnoremap <Esc> <C-\><C-n>
 nmap s <Nop>
 xmap s <Nop>
 nmap sv :vsplit <CR><C-w>w<plug>(wintabs_close)<C-w>w
