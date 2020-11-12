@@ -2,7 +2,7 @@
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
 let g:fern#renderer = "nerdfont"
-noremap <silent> <Space>f :Fern . -reveal=% <CR>
+noremap <silent> <Space>f :Fern . -reveal=% <CR><C-w>=
 
 function! s:init_fern() abort
   nmap <buffer> <CR> <Plug>(fern-my-open-expand-collapse)
