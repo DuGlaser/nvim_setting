@@ -61,9 +61,6 @@ set conceallevel=0
 set signcolumn=yes
 set cursorline
 set splitright
-let g:vim_json_syntax_conceal = 0
-
-let g:AutoClosePreserveDotReg = 0
 
 " Key map setting
 let mapleader = "\<Space>"
@@ -74,11 +71,10 @@ xmap s <Nop>
 nmap sv :vsplit <CR><C-w>w<plug>(wintabs_close)<C-w>w
 
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
-nmap # <Space><Space>:%s/<C-r>///g<Left><Left>
+nmap # :%s/\<<C-r><C-w>\>//g<Left><Left>
 xnoremap <silent> <Space> mz:call <SID>set_vsearch()<CR>:set hlsearch<CR>`z
 xnoremap * :<C-u>call <SID>set_vsearch()<CR>/<C-r>/<CR>
-xmap # <Space>:%s/<C-r>///g<Left><Left>
-inoremap <C-t> <Esc><Left>"zx"zpa
+xmap # :%s/\<<C-r><C-w>\>//g<Left><Left>
 nnoremap <silent> <Space>l :<C-u>nohlsearch<CR><C-l>
 nnoremap x "_x
 
