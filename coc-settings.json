@@ -23,7 +23,8 @@
   "typescript.preferences.importModuleSpecifierEnding": "auto",
   "tsserver.enableJavascript": true,
   "go.goplsOptions": {
-    "completeUnimported": true
+    "completeUnimported": true,
+    "experimentalWorkspaceModule": true
   },
   "go.checkForUpdates": "ask",
   "tabnine.priority": 97,
