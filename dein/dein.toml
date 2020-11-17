@@ -1,47 +1,50 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# colorscheme
 [[plugins]]
-repo = 'sainnhe/gruvbox-material'
+repo = 'morhetz/gruvbox'
+hook_add = '''
+" if exists('+termguicolors')
+"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"   set termguicolors
+" endif
 
-# filer
-[[plugins]]	
-repo = 'cocopon/vaffle.vim'	
-hook_add = '''	
-nnoremap <silent> <Space>f  :<C-u>Vaffle<CR>	
-  function! VaffleRenderCustomIcon(item)	
-    return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)	
-  endfunction	
-  let g:vaffle_render_custom_icon = 'VaffleRenderCustomIcon'	
-let g:vaffle_show_hidden_files = 1	
-let g:vaffle_auto_cd = 1
-let g:vaffle_force_delete = 1
-'''	
+set termguicolors
+syntax enable 
+filetype plugin indent on
 
-# devicons
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_invert_selection= 0
+colorscheme gruvbox
+'''
+
+# [[plugins]]
+# repo = 'ghifarit53/tokyonight-vim'
+# hook_add = '''
+# set termguicolors
+
+# let g:tokyonight_style = 'storm' " available: night, storm
+# let g:tokyonight_enable_italic = 1
+
+# colorscheme tokyonight
+# '''
+
+# neovim #12587
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
+repo = 'antoinemadec/FixCursorHold.nvim'
+hook_add = '''
+let g:cursorhold_updatetime = 100
+'''
 
 # fzf
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
-marge = 0
+marged = 0
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
-
-[[plugins]]
-repo = 'Shougo/echodoc.vim'
-hook_add = '''
-let g:echodoc#enable_at_startup = 1
-let g:echodoc#type = 'floating'
-highlight link EchoDocFloat Pmenu
-'''
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
 
 # [ lightline ] ------------------------
 # ======================================
@@ -50,16 +53,18 @@ repo = 'itchyny/lightline.vim'
 
 hook_add = '''
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox_material',
+      \ 'colorscheme': 'gruvbox',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
+      \ 'enable': {'tabline': 0},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
       \ }
+
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
@@ -69,17 +74,10 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-'''
-[[plugins]]
-repo = 'zefei/vim-wintabs'
-hook_add = '''
-nmap <C-t><C-l> <plug>(wintabs_next)
-nmap <C-t><C-h> <plug>(wintabs_previous)
-nmap <C-t><C-p> <plug>(wintabs_close)
-'''
 
-[[plugins]]
-repo = 'zefei/vim-wintabs-powerline'
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
+set showtabline=2
+'''
 # ======================================
 # --------------------------------------
 
@@ -186,6 +184,59 @@ nnoremap <silent><Space>cb
 \ :<C-u>Clap buffers<CR>
 nnoremap <silent><Space>cy 
 \ :<C-u>Clap yanks<CR>
+'''
+
+[[plugins]]
+repo = 'zefei/vim-wintabs'
+hook_add = '''
+nmap <C-t><C-l> <plug>(wintabs_next)
+nmap <C-t><C-h> <plug>(wintabs_previous)
+nmap <C-t><C-p> <plug>(wintabs_close)
+'''
+
+[[plugins]]
+repo = 'zefei/vim-wintabs-powerline'
+
+[[plugins]]
+repo = 'tyru/columnskip.vim'
+hook_add = '''
+nmap sj <Plug>(columnskip:nonblank:next)
+omap sj <Plug>(columnskip:nonblank:next)
+xmap sj <Plug>(columnskip:nonblank:next)
+nmap sk <Plug>(columnskip:nonblank:prev)
+omap sk <Plug>(columnskip:nonblank:prev)
+xmap sk <Plug>(columnskip:nonblank:prev)
+'''
+# ======================================
+# --------------------------------------
+
+
+# [ text object ] ----------------------
+# ======================================
+[[plugins]]
+repo = 'bkad/CamelCaseMotion'
+hook_add = '''
+omap <silent> ,w <Plug>CamelCaseMotion_iw
+xmap <silent> ,w <Plug>CamelCaseMotion_iw
+omap <silent> ,b <Plug>CamelCaseMotion_ib
+xmap <silent> ,b <Plug>CamelCaseMotion_ib
+omap <silent> ,e <Plug>CamelCaseMotion_ie
+xmap <silent> ,e <Plug>CamelCaseMotion_ie
+map <silent> W <Plug>CamelCaseMotion_w
+map <silent> B <Plug>CamelCaseMotion_b
+map <silent> E <Plug>CamelCaseMotion_e
+'''
+
+[[plugins]]
+repo = 'romgrk/equal.operator'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'sgur/vim-textobj-parameter'
+hook_add = '''
+let g:vim_textobj_parameter_mapping = ','
 '''
 # ======================================
 # --------------------------------------

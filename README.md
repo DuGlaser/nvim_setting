@@ -16,6 +16,11 @@
 └── init.vim
 ```
 
+## Requirements
+* Neovim nightly
+* Node
+* Python3
+
 ## init.vim
 deinの読み込みや全体の設定をしています
 
@@ -47,3 +52,13 @@ coc全体の設定をしています。
 
 ## coc-settings.json
 cocのプラグインごとの設定をしています。
+
+## Benchmark
+
+benchmark with <a href="https://github.com/rhysd/vim-startuptime">vim-startuptime</a>
+
+```
+Total Average: 190.093400 msec
+Total Max:     218.034000 msec
+Total Min:     177.577000 msec
+```

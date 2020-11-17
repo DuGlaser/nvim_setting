@@ -15,12 +15,14 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lsp.toml', {'lazy': 0})
+  call dein#load_toml('~/.config/nvim/dein/dein_fern.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein/dein_lang.toml', {'lazy': 1})
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
+  call dein#add('neoclide/coc.nvim', { 'merged': 0 })
+  call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
-  source ~/.config/nvim/dein.rc.vim
 endif
 
 if dein#check_install()
@@ -33,6 +35,11 @@ if len(s:removed_plugins)>0
   call dein#recache_runtimepath()
 endif
 
+source ~/.config/nvim/dein.rc.vim
+
+set fileformat=unix
+set fileformats=unix,dos,mac
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp
 set cmdheight=1
 set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
@@ -51,54 +58,22 @@ set incsearch
 set inccommand=split
 set conceallevel=0
 set signcolumn=yes
-let g:vim_json_syntax_conceal = 0
-
-let g:AutoClosePreserveDotReg = 0
-
-" colorscheme setting
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-syntax enable 
-filetype plugin indent on
-
-set background=dark
-let g:gruvbox_material_palette = 'original'
-colorscheme gruvbox-material
-
-" let g:loaded_matchparen=1
-" highlight MatchParen ctermfg=NONE ctermbg=0 guibg=#2572A2 guifg=#eeeeee
-" highlight Normal ctermbg=NONE guibg=NONE
-" highlight NonText ctermbg=NONE guibg=NONE
-" highlight SpecialKey ctermbg=NONE guibg=NONE
-" highlight LineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-" highlight CursorLineNr ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-" highlight SignColumn ctermfg=NONE guibg=NONE cterm=NONE guifg=#ffb244
-" highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
-" yank highlight
-highlight HighlightedyankRegion term=bold ctermbg=0 guibg=#2572A2
+set cursorline
+set splitright
 
 " Key map setting
 let mapleader = "\<Space>"
 noremap ; : 
-nnoremap <C-h> gT 
-nnoremap dm) vmzi)o`zod
-nnoremap <C-l> gt
 noremap <Space>i %
-tnoremap <Esc> <C-\><C-n>
 nmap s <Nop>
 xmap s <Nop>
+nmap sv :vsplit <CR><C-w>w<plug>(wintabs_close)<C-w>w
 
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
-nmap # <Space><Space>:%s/<C-r>///g<Left><Left>
+nmap # :%s/\<<C-r><C-w>\>//g<Left><Left>
 xnoremap <silent> <Space> mz:call <SID>set_vsearch()<CR>:set hlsearch<CR>`z
 xnoremap * :<C-u>call <SID>set_vsearch()<CR>/<C-r>/<CR>
-xmap # <Space>:%s/<C-r>///g<Left><Left>
-inoremap <C-t> <Esc><Left>"zx"zpa
+xmap # :%s/\<<C-r><C-w>\>//g<Left><Left>
 nnoremap <silent> <Space>l :<C-u>nohlsearch<CR><C-l>
 nnoremap x "_x
 
@@ -111,16 +86,53 @@ endfunction
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
 " Python setting
-let g:python_host_prog = expand('/usr/bin/python2')
+let g:python_host_prog = '/usr/bin/python2'
 
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " set filetype
 autocmd FileType vue syntax sync fromstart
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 augroup auto_comment_off
     autocmd!
     autocmd BufEnter * setlocal formatoptions-=r
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
+
+" treesitter setting
+lua <<EOF	
+require'nvim-treesitter.configs'.setup {	
+  highlight = {	
+    enable = true,	
+    disable = {	
+      'lua',	
+      'ruby',	
+      'html',	
+      'toml',
+      'c_sharp',	
+      'css',	
+      'vue',	
+    }	
+  },	
+  incremental_selection = {	
+    enable = true,	
+  },	
+  refactor = {	
+    highlight_definitions = {	
+      enable = false,	
+    },	
+    highlight_current_scope = {	
+      enable = false,	
+    },	
+    smart_rename = {	
+      enable = false,	
+    },	
+    navigation = {	
+      enable = false,	
+    }	
+  },	
+  textobjects = { -- syntax-aware textobjects	
+    enable = true,
+  },
+  ensure_installed = 'maintained' -- one of 'all', 'language', or a list of languages	
+}	
+EOF	
