@@ -9,11 +9,9 @@ hook_add = '''
 "   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 "   set termguicolors
 " endif
-
 set termguicolors
 syntax enable 
 filetype plugin indent on
-
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_invert_selection= 0
 colorscheme gruvbox
@@ -64,8 +62,6 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
       \ }
-
-
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
   let path = expand('%:p')
@@ -74,7 +70,6 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-
 autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
 set showtabline=2
 '''
