@@ -2,7 +2,7 @@
 repo = 'neovim/nvim-lspconfig'
 hook_add = '''
 lua << END
-  local nvim_lsp = require'nvim_lsp'
+  local nvim_lsp = require'lspconfig'
   local on_attach = function(client)
     -- require'diagnostic'.on_attach()
     require'completion'.on_attach()
@@ -57,15 +57,4 @@ let g:completion_chain_complete_list = {
           \ 'TabNine' : 0,
           \ 'File' : 0,
           \}
-'''
-
-[[plugins]]
-repo = 'nvim-lua/diagnostic-nvim'
-hook_add = '''
-let g:diagnostic_insert_delay = 0
-
-autocmd BufEnter * lua require'diagnostic'.on_attach()
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
-autocmd BufEnter * highlight LspDiagnosticsError ctermbg=167 guifg=#fb4934
-autocmd BufEnter * highlight LspDiagnosticsWarning ctermfg=214 guifg=#fabd2f
 '''
