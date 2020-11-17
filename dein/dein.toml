@@ -62,6 +62,7 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
       \ }
+
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
   let path = expand('%:p')
@@ -70,6 +71,7 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
+
 autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
 set showtabline=2
 '''
