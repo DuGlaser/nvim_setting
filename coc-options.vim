@@ -148,3 +148,18 @@ nmap <silent> <space>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR
 
 let g:coc_snippet_next = '<c-n>'
 let g:coc_snippet_prev = '<c-b>'
+
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-tsserver',
+      \ 'coc-ultisnips',
+      \ 'coc-tailwindcss',
+      \ 'coc-spell-checker',
+      \ 'coc-prettier',
+      \ 'coc-pairs',
+      \ 'coc-eslint',
+      \ 'coc-rust-analyzer',
+      \ 'coc-go',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ ]
