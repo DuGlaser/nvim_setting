@@ -129,6 +129,9 @@ call gina#custom#command#alias('commit', 'ct')
 # ======================================
 [[plugins]]
 repo = 'itchyny/vim-parenmatch'
+hook_add = '''
+let g:loaded_matchparen = 1
+'''
 
 [[plugins]]
 repo = 'chrisbra/Colorizer'
