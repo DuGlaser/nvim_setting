@@ -43,18 +43,18 @@ set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp
 set cmdheight=1
 set rtp+=/usr/local/opt/fzf
 set encoding=UTF-8
-set number             
-set autoindent        
+set number
+set autoindent
 set expandtab
-set tabstop=2          
-set shiftwidth=2       
-set expandtab          
-set clipboard=unnamed  
-set hls               
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set clipboard=unnamed
+set hls
 set completeopt=menuone,noinsert
 set t_Co=256
 set nocompatible
-set ignorecase 
+set ignorecase
 set incsearch
 set inccommand=split
 set conceallevel=0
@@ -64,7 +64,7 @@ set splitright
 
 " Key map setting
 let mapleader = "\<Space>"
-noremap ; : 
+noremap ; :
 noremap <Space>i %
 nmap s <Nop>
 xmap s <Nop>
@@ -101,39 +101,39 @@ augroup END
 
 " treesitter setting
 lua <<EOF	
-require'nvim-treesitter.configs'.setup {	
-  highlight = {	
-    enable = true,	
-    disable = {	
-      'lua',	
-      'ruby',	
-      'html',	
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    disable = {
+      'lua',
+      'ruby',
+      'html',
       'toml',
-      'c_sharp',	
-      'css',	
-      'vue',	
-    }	
-  },	
-  incremental_selection = {	
-    enable = true,	
-  },	
-  refactor = {	
-    highlight_definitions = {	
-      enable = false,	
-    },	
-    highlight_current_scope = {	
-      enable = false,	
-    },	
-    smart_rename = {	
-      enable = false,	
-    },	
-    navigation = {	
-      enable = false,	
-    }	
-  },	
+      'c_sharp',
+      'css',
+      'vue',
+    }
+  },
+  incremental_selection = {
+    enable = true,
+  },
+  refactor = {
+    highlight_definitions = {
+      enable = false,
+    },
+    highlight_current_scope = {
+      enable = false,
+    },
+    smart_rename = {
+      enable = false,
+    },
+    navigation = {
+      enable = false,
+    }
+  },
   textobjects = { -- syntax-aware textobjects	
     enable = true,
   },
   ensure_installed = 'maintained' -- one of 'all', 'language', or a list of languages	
-}	
+}
 EOF	
