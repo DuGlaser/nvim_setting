@@ -46,16 +46,8 @@ on_ft = ['java']
 # [ HTML&CSS ] -----------
 # ======================== 
 [[plugins]]
-repo = 'cakebaker/scss-syntax.vim'
-on_ft = ['html','css']
-
-[[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = ['html', 'css', 'typescriptreact', 'javascriptreact', 'vue']
-
-[[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-on_ft = ['html','css']
 
 [[plugins]]
 repo = 'tell-k/vim-browsereload-mac'
