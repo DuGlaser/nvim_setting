@@ -107,10 +107,8 @@ require'nvim-treesitter.configs'.setup {
     disable = {
       'lua',
       'ruby',
-      'html',
       'toml',
       'c_sharp',
-      'css',
       'vue',
     }
   },
