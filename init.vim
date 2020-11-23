@@ -129,9 +129,9 @@ require'nvim-treesitter.configs'.setup {
       enable = false,
     }
   },
-  textobjects = { -- syntax-aware textobjects	
+  textobjects = {
     enable = true,
   },
-  ensure_installed = 'maintained' -- one of 'all', 'language', or a list of languages	
+  ensure_installed = 'all'
 }
 EOF	
