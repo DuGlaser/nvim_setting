@@ -4,19 +4,12 @@ hook_add = '''
 let g:ale_linters = { 
       \ 'cs': ['OmniSharp'],
       \ 'go': ['golint'],
-      " \ 'typescriptreact': ['eslint'],
-      " \ 'typescript': ['eslint'],
-      " \ 'tsx': ['eslint'],
-      " \ 'javascriptreact': ['eslint'],
-      " \ 'javascript': ['eslint'],
-      " \ 'jsx': ['eslint'],
       \ }
 let g:ale_linters_explicit = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '⚠'
 let g:ale_fix_on_save = 1
 '''
-# on_ft = ['cs','typescript','typescriptreact','tsx','javascript','javascriptreact','javascriptreact']
 on_ft = ['cs','go']
 
 [[plugins]]
@@ -32,16 +25,6 @@ nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 '''
 on_ft = ['go']
-
-# [ java ] ---------------
-# ======================== 
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-on_ft = ['java']
-
-# ======================== 
-# ------------------------ 
-
 
 # [ HTML&CSS ] -----------
 # ======================== 
