@@ -93,6 +93,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " set filetype
 autocmd FileType vue syntax sync fromstart
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 augroup auto_comment_off
     autocmd!
     autocmd BufEnter * setlocal formatoptions-=r
