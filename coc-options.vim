@@ -143,8 +143,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 function! s:cocActionsOpenFromSelected(type) abort
   execute 'CocCommand actions.open ' . a:type
 endfunction
-xmap <silent> <space>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
-nmap <silent> <space>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
+nmap <space>ac  <Plug>(coc-codeaction)
+
 
 let g:coc_snippet_next = '<c-n>'
 let g:coc_snippet_prev = '<c-b>'
