@@ -101,7 +101,7 @@ on_ft = ['svelte']
 
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
-on_ft = ['typescript.tsx', 'javascript.tsx']
+on_ft = ['typescriptreact', 'javascriptreact', 'typescript.tsx', 'javascript.jsx']
 # ======================== 
 # ------------------------ 
 
