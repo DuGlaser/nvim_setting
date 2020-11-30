@@ -115,8 +115,16 @@ require'nvim-treesitter.configs'.setup {
     }
   },
   incremental_selection = {
+    enable = false,
+  },
+  indent = {
+    enable = true
+  },
+  textobjects = {
     enable = true,
   },
+  ensure_installed = 'all',
+  -- nvim-treesitter-refactor
   refactor = {
     highlight_definitions = {
       enable = false,
@@ -130,10 +138,6 @@ require'nvim-treesitter.configs'.setup {
     navigation = {
       enable = false,
     }
-  },
-  textobjects = {
-    enable = true,
-  },
-  ensure_installed = 'all'
+  }
 }
 EOF	
