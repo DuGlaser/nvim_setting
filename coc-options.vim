@@ -143,7 +143,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 function! s:cocActionsOpenFromSelected(type) abort
   execute 'CocCommand actions.open ' . a:type
 endfunction
-nmap <space>ac  <Plug>(coc-codeaction)
+nmap <space>ca  <Plug>(coc-codeaction)
 
 
 let g:coc_snippet_next = '<c-n>'
