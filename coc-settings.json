@@ -59,6 +59,7 @@
     "dart",
     "graphql",
     "go",
-    "cs"
+    "cs",
+    "python"
   ]
 }
