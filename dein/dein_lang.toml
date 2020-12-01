@@ -26,6 +26,18 @@ nmap <silent> t<C-g> :TestVisit<CR>
 '''
 on_ft = ['go']
 
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim'] 
+on_ft = ['html', 'vim', 'toml', 'lua']
+hook_add = '''
+let g:context_filetype#search_offset = 100
+'''
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+on_ft = ['html', 'vim', 'toml', 'lua']
+
 # [ HTML&CSS ] -----------
 # ======================== 
 [[plugins]]
@@ -99,9 +111,12 @@ on_ft = ['mdx']
 repo = 'evanleck/vim-svelte'
 on_ft = ['svelte']
 
-[[plugins]]
-repo = 'MaxMEllon/vim-jsx-pretty'
-on_ft = ['typescriptreact', 'javascriptreact', 'typescript.tsx', 'javascript.jsx']
+# [[plugins]]
+# repo = 'MaxMEllon/vim-jsx-pretty'
+# hook_add = '''
+# let g:vim_jsx_pretty_enable_jsx_highlight = 0
+# '''
+# on_ft = ['typescriptreact', 'javascriptreact', 'typescript.tsx', 'javascript.jsx']
 # ======================== 
 # ------------------------ 
 

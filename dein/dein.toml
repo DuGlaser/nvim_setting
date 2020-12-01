@@ -81,25 +81,6 @@ set showtabline=2
 # ======================================
 # --------------------------------------
 
-# [ filetype ] -------------------------
-# ======================================
-[[plugins]]
-repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim'] 
-hook_add = '''
-let g:context_filetype#search_offset = 100
-	let g:precious_enable_switchers = {
-	\	"vue" : {
-	\		"setfiletype" : 0
-	\	},
-	\}
-'''
-
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
-# ======================================
-# --------------------------------------
-
 
 # [ git ] ------------------------------
 # ======================================
