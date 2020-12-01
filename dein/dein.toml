@@ -85,12 +85,23 @@ set showtabline=2
 # [ git ] ------------------------------
 # ======================================
 [[plugins]]
-repo = 'tpope/vim-fugitive'
+repo = 'nvim-lua/plenary.nvim'
 
 [[plugins]]
-repo = "airblade/vim-gitgutter"
+repo = 'lewis6991/gitsigns.nvim'
 hook_add = '''
-nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+lua <<EOF
+require('gitsigns').setup{
+    -- debug_mode = true,
+    signs = {
+      add          = {hl = 'GitGutterAdd'   },
+      change       = {hl = 'GitGutterChange'},
+      delete       = {hl = 'GitGutterDelete'},
+      topdelete    = {hl = 'GitGutterDelete'},
+      changedelete = {hl = 'GitGutterChange'},
+    },
+  }
+EOF
 '''
 
 [[plugins]]
