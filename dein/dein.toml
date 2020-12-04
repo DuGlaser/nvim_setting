@@ -46,6 +46,13 @@ marged = 0
 [[plugins]]
 repo = 'machakann/vim-sandwich'
 
+[[plugins]]
+repo = 't9md/vim-choosewin'
+hook_add = '''
+let g:choosewin_overlay_enable = 1
+nmap  -  <Plug>(choosewin)
+'''
+
 # [ lightline ] ------------------------
 # ======================================
 [[plugins]]
