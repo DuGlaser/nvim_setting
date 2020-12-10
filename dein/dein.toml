@@ -133,6 +133,9 @@ let g:loaded_matchparen = 1
 '''
 
 [[plugins]]
+repo = 'norcalli/nvim-colorizer.lua'
+
+[[plugins]]
 repo = 'thinca/vim-zenspace'
 hook_add = '''
 let g:zenspace#default_mode = 'on'
