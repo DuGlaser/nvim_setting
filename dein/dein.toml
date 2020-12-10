@@ -133,9 +133,6 @@ let g:loaded_matchparen = 1
 '''
 
 [[plugins]]
-repo = 'chrisbra/Colorizer'
-
-[[plugins]]
 repo = 'thinca/vim-zenspace'
 hook_add = '''
 let g:zenspace#default_mode = 'on'
