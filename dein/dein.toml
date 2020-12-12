@@ -188,16 +188,27 @@ nnoremap <silent><Space>cy
 \ :<C-u>Clap yanks<CR>
 '''
 
-[[plugins]]
-repo = 'zefei/vim-wintabs'
-hook_add = '''
-nmap <C-t><C-l> <plug>(wintabs_next)
-nmap <C-t><C-h> <plug>(wintabs_previous)
-nmap <C-t><C-p> <plug>(wintabs_close)
-'''
+# [[plugins]]
+# repo = 'zefei/vim-wintabs'
+# hook_add = '''
+# nmap <C-t><C-l> <plug>(wintabs_next)
+# nmap <C-t><C-h> <plug>(wintabs_previous)
+# nmap <C-t><C-p> <plug>(wintabs_close)
+# '''
+
+# [[plugins]]
+# repo = 'zefei/vim-wintabs-powerline'
 
 [[plugins]]
-repo = 'zefei/vim-wintabs-powerline'
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
+repo = 'akinsho/nvim-bufferline.lua'
+hook_add = '''
+nnoremap <silent>gb :BufferLinePick<CR>
+  nnoremap <silent><C-t><C-l> :BufferLineCycleNext<CR>
+nnoremap <silent><C-t><C-h> :BufferLineCyclePrev<CR>
+'''
 
 [[plugins]]
 repo = 'tyru/columnskip.vim'
