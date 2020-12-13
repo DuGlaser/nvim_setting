@@ -34,8 +34,8 @@ if len(s:removed_plugins)>0
   call dein#recache_runtimepath()
 endif
 
-source ~/.config/nvim/dein.rc.vim
-source ~/.config/nvim/coc-options.vim
+runtime dein.rc.vim
+runtime coc-options.vim
 
 set fileformat=unix
 set fileformats=unix,dos,mac
@@ -96,13 +96,13 @@ autocmd FileType vue syntax sync fromstart
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 augroup auto_comment_off
-    autocmd!
-    autocmd BufEnter * setlocal formatoptions-=r
-    autocmd BufEnter * setlocal formatoptions-=o
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=r
+  autocmd BufEnter * setlocal formatoptions-=o
 augroup END
 
 " lua plugin setting
-lua <<EOF	
+lua <<EOF
 require'colorizer'.setup()
 require'bufferline'.setup{
   options = {
@@ -112,6 +112,8 @@ require'bufferline'.setup{
     show_buffer_close_icons = false
   };
 }
+
+
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -149,4 +151,4 @@ require'nvim-treesitter.configs'.setup {
     }
   }
 }
-EOF	
+EOF
