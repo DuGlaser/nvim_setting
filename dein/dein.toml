@@ -197,6 +197,7 @@ hook_add = '''
 nnoremap <silent><C-t><C-t> :BufferLinePick<CR>
 nnoremap <silent><C-t><C-l> :BufferLineCycleNext<CR>
 nnoremap <silent><C-t><C-h> :BufferLineCyclePrev<CR>
+nnoremap <silent><C-t><C-p> :bd<CR>
 '''
 
 [[plugins]]
