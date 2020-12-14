@@ -20,6 +20,7 @@
   "suggest.minTriggerInputLength": 1,
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "suggest.timeout": 5000,
+  "rust-analyzer.diagnostics.enableExperimental": false,
   "typescript.preferences.importModuleSpecifier": "auto",
   "typescript.preferences.importModuleSpecifierEnding": "auto",
   "tsserver.enableJavascript": true,
