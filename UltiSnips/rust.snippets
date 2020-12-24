@@ -264,3 +264,20 @@ impl<T: Ord> BinarySearch<T> for [T] {
     }
 }
 endsnippet
+
+snippet format_radix "format_radix"
+fn format_radix(mut x: u32, radix: u32) -> String {
+    let mut result = vec![];
+
+    loop {
+        let m = x % radix;
+        x = x / radix;
+
+        result.push(std::char::from_digit(m, radix).unwrap());
+        if x == 0 {
+            break;
+        }
+    }
+    result.into_iter().rev().collect()
+}
+endsnippet
