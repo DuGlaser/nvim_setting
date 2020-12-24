@@ -19,6 +19,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml('~/.config/nvim/dein/dein_lazy.toml', {'lazy': 1})
   call dein#add('neoclide/coc.nvim', { 'merged': 0 })
   call dein#add('nvim-treesitter/nvim-treesitter', { 'merged': 0 })
+  call dein#add('nvim-telescope/telescope.nvim')
   call map(dein#check_clean(), "delete(v:val, 'rf')")
   call dein#end()
   call dein#save_state()
@@ -101,6 +102,9 @@ augroup auto_comment_off
   autocmd BufEnter * setlocal formatoptions-=o
 augroup END
 
+nnoremap <Space>cf :lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>
+nnoremap <Space>cg :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>
+
 " lua plugin setting
 lua <<EOF
 require'colorizer'.setup()
@@ -113,6 +117,16 @@ require'bufferline'.setup{
   };
 }
 
+require('telescope').setup{
+  defaults = {
+    prompt_position = "bottom",
+    prompt_prefix = ">",
+    selection_strategy = "reset",
+    sorting_strategy = "descending",
+    layout_strategy = "horizontal",
+    width = 0.75,
+  }
+}
 
 require'nvim-treesitter.configs'.setup {
   highlight = {
