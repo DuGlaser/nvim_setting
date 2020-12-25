@@ -4,14 +4,23 @@ return require('packer').startup(function()
   use 'gruvbox-community/gruvbox'
   use 'machakann/vim-sandwich'
   use 'christoomey/vim-tmux-navigator'
-  use {'neoclide/coc.nvim', run = 'yarn install --frozen-lockfile'}
+  use 'romgrk/equal.operator'
+  use 'rhysd/clever-f.vim'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-commentary'
+  use 'SirVer/ultisnips'
+  use 'lambdalisue/gina.vim'
+
+  use {
+    'neoclide/coc.nvim', 
+    run = 'yarn install --frozen-lockfile'
+  }
   use {
     'akinsho/nvim-bufferline.lua',
     requires = {
       {'kyazdani42/nvim-web-devicons'},
     }
   }
-  use 'SirVer/ultisnips'
   use {
     'mattn/emmet-vim',
     cmd = 'EmmetInstall',
@@ -35,10 +44,6 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = function() vim.cmd [[TSUpdate]] end
   }
-  use 'romgrk/equal.operator'
-  use 'rhysd/clever-f.vim'
-  use 'tpope/vim-repeat'
-  use 'tpope/vim-commentary'
   use {
     'kana/vim-operator-replace',
     requires = {
@@ -50,7 +55,6 @@ return require('packer').startup(function()
     't9md/vim-choosewin',
     config = function() vim.cmd('nmap  -  <Plug>(choosewin)') end
   }
-  use 'lambdalisue/gina.vim'
   use {
     'itchyny/vim-parenmatch',
     config = function() vim.g.loaded_matchparen = 1 end
@@ -75,6 +79,26 @@ return require('packer').startup(function()
   use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'lambdalisue/nerdfont.vim'
   use 'lambdalisue/glyph-palette.vim'
+
+  -- js
+  use {
+    'MaxMEllon/vim-jsx-pretty',
+    ft = {'typescriptreact', 'javascriptreact', 'typescript.tsx', 'javascript.jsx'},
+    config = function() vim.g.vim_jsx_pretty_enable_jsx_highlight = 0 end
+  }
+
+  -- rust
+  use {
+    'rust-lang/rust.vim',
+    ft = {'rust'},
+    config = function() vim.g.rustfmt_autosave = 1 end
+  }
+
+  -- go
+  use {
+    'rhysd/vim-go-impl',
+    ft = {'go'}
+  }
 end)
 
 -- vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
