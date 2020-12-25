@@ -62,6 +62,7 @@
     "graphql",
     "go",
     "cs",
-    "python"
+    "python",
+    "lua"
   ]
 }
