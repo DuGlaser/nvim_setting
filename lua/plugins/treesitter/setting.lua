@@ -13,7 +13,10 @@ require'nvim-treesitter.configs'.setup {
     enable = false,
   },
   indent = {
-    enable = true
+    enable = true,
+    disable = {
+      'lua',
+    }
   },
   textobjects = {
     enable = true,
