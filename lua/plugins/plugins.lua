@@ -71,6 +71,10 @@ return require('packer').startup(function()
     'machakann/vim-highlightedyank',
     config = function() vim.g.highlightedyank_highlight_duration = 200 end
   }
+  use {
+    'glepnir/galaxyline.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
 
   -- fern
   use 'lambdalisue/fern.vim'
