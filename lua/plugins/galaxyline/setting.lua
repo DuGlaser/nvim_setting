@@ -162,12 +162,6 @@ gls.right[3] = {
     highlight = {colors.cyan,colors.darkblue,'bold'},
   }
 }
-gls.right[4] = {
-  ScrollBar = {
-    provider = 'ScrollBar',
-    highlight = {colors.blue,colors.purple},
-  }
-}
 
 gls.short_line_left[1] = {
   BufferType = {
