@@ -16,6 +16,8 @@ if not packer_exists then
 end
 
 return require('packer').startup(function()
+  use {'wbthomason/packer.nvim', opt = true}
+
   use 'gruvbox-community/gruvbox'
   use 'machakann/vim-sandwich'
   use 'christoomey/vim-tmux-navigator'
