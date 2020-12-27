@@ -1,4 +1,19 @@
-vim.cmd [[packadd packer.nvim]]
+local packer_exists = pcall(vim.cmd, [[packadd packer.nvim]])
+
+if not packer_exists then
+  if vim.fn.input("Download Packer? (y for yes)") ~= "y" then
+    return
+  end
+
+  local execute = vim.api.nvim_command
+  local fn = vim.fn
+
+  local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+  execute 'packadd packer.nvim'
+
+  return
+end
 
 return require('packer').startup(function()
   use 'gruvbox-community/gruvbox'
@@ -80,9 +95,13 @@ return require('packer').startup(function()
   use 'lambdalisue/fern.vim'
   use 'lambdalisue/fern-hijack.vim'
   use 'hrsh7th/fern-mapping-collapse-or-leave.vim'
-  use 'lambdalisue/fern-renderer-nerdfont.vim'
-  use 'lambdalisue/nerdfont.vim'
-  use 'lambdalisue/glyph-palette.vim'
+  use {
+    'lambdalisue/fern-renderer-nerdfont.vim',
+    requires = {
+      'lambdalisue/nerdfont.vim',
+      'lambdalisue/glyph-palette.vim'
+    }
+  }
 
   -- js
   use {
