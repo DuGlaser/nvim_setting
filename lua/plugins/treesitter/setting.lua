@@ -31,7 +31,10 @@ require'nvim-treesitter.configs'.setup {
       enable = false,
     },
     smart_rename = {
-      enable = false,
+      enable = true,
+      keymaps = {
+        smart_rename = "grr",
+      },
     },
     navigation = {
       enable = false,

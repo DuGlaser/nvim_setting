@@ -58,10 +58,6 @@ return require('packer').startup(function()
     }
   }
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() vim.cmd [[TSUpdate]] end
-  }
-  use {
     'kana/vim-operator-replace',
     requires = {
       {'kana/vim-operator-user'}
@@ -92,6 +88,13 @@ return require('packer').startup(function()
     'glepnir/galaxyline.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
+
+  -- treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() vim.cmd [[TSUpdate]] end
+  }
+  use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- fern
   use 'lambdalisue/fern.vim'
