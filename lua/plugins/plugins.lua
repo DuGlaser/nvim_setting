@@ -27,6 +27,7 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'SirVer/ultisnips'
   use 'lambdalisue/gina.vim'
+  use 'kevinhwang91/nvim-hlslens'
 
   use {
     'neoclide/coc.nvim', 
