@@ -44,10 +44,6 @@ local options = {
 
 apply_options(options)
 
-vim.g.node_host_prog = "/usr/local/bin/neovim-node-host"
-vim.g.python_host_prog = "/usr/bin/python2"
-vim.g.python3_host_prog = "/usr/local/bin/python3"
-
 cmd('augroup auto_comment_off')
 cmd('autocmd!')
 cmd('autocmd BufEnter * setlocal formatoptions-=r')
