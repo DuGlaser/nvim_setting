@@ -21,7 +21,7 @@ require'nvim-treesitter.configs'.setup {
   textobjects = {
     enable = true,
   },
-  ensure_installed = 'all',
+  -- ensure_installed = 'all',
   -- nvim-treesitter-refactor
   refactor = {
     highlight_definitions = {
