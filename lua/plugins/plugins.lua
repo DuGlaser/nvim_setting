@@ -28,6 +28,11 @@ return require('packer').startup(function()
   use 'SirVer/ultisnips'
   use 'lambdalisue/gina.vim'
   use 'kevinhwang91/nvim-hlslens'
+  use 'mattn/emmet-vim'
+  use {
+    'liuchengxu/vim-clap',
+    run = function() vim.cmd('Clap install-binary')  end
+  }
 
   use {
     'neoclide/coc.nvim', 
@@ -38,11 +43,6 @@ return require('packer').startup(function()
     requires = {
       {'kyazdani42/nvim-web-devicons'},
     }
-  }
-  use {
-    'mattn/emmet-vim',
-    cmd = 'EmmetInstall',
-    opt = true
   }
   use {
     'lewis6991/gitsigns.nvim',
@@ -91,10 +91,7 @@ return require('packer').startup(function()
   }
 
   -- treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() vim.cmd [[TSUpdate]] end
-  }
+  use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- fern
