@@ -1,4 +1,4 @@
-vim.cmd('syntax on')
+vim.cmd('syntax enable')
 vim.cmd('set termguicolors')
 
 vim.o.background = 'dark'
