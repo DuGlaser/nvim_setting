@@ -27,7 +27,6 @@ local options = {
 	expandtab = true,
 	tabstop = 2,
 	shiftwidth = 2,
-	clipboard = "unnamed",
 	hls = true,
 	completeopt = "menuone,noinsert",
 	t_Co = 256,
@@ -42,6 +41,7 @@ local options = {
   showtabline = 2,
 }
 
+cmd('set clipboard+=unnamedplus')
 apply_options(options)
 
 cmd('augroup auto_comment_off')
