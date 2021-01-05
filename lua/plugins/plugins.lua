@@ -29,6 +29,7 @@ return require('packer').startup(function()
   use 'lambdalisue/gina.vim'
   use 'kevinhwang91/nvim-hlslens'
   use 'mattn/emmet-vim'
+  use 'tpope/vim-fugitive'
   use {
     'liuchengxu/vim-clap',
     run = function() vim.cmd('Clap install-binary')  end
