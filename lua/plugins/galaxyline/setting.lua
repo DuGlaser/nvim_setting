@@ -56,7 +56,11 @@ gls.left[3] ={
 }
 gls.left[4] = {
   FileName = {
-    provider = {'FileName'},
+    provider = function()
+      local path = vim.fn.expand('%:p')
+      local _, git_path = pcall(vim.api.nvim_buf_get_var,0,'git_dir')
+      return string.sub(path, string.len(git_path)-4)
+    end,
     condition = buffer_not_empty,
     highlight = {colors.fg,colors.line_bg,'bold'}
   }
