@@ -1,7 +1,7 @@
-local remap = vim.api.nvim_set_keymap
+local map = vim.api.nvim_set_keymap
 
-remap('n', ';', ':', { noremap = true})
-remap('n', 's', '<Nop>', { noremap = true})
-remap('x', 's', '<Nop>', { noremap = true})
-remap('n', 'sv', '<cmd>vsplit <CR><C-w>w<plug>(wintabs_close)<C-w>w', { noremap = true})
-remap('n', '<Space>l', '<cmd>nohlsearch<CR><C-l>', { noremap = true, silent = true })
+map('n', ';', ':', { noremap = true})
+map('n', 's', '<Nop>', { noremap = true})
+map('x', 's', '<Nop>', { noremap = true})
+map('n', 'sv', '<cmd>vsplit <CR><C-w>w<plug>(wintabs_close)<C-w>w', { noremap = true})
+map('n', '<Space>l', '<cmd>nohlsearch<CR><C-l>', { noremap = true, silent = true })
