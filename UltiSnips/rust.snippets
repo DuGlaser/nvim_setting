@@ -181,6 +181,7 @@ impl UnionFind {
         if self.pos[x] > self.pos[y] {
             std::mem::swap(&mut x, &mut y);
         }
+        // rootには木のsizeを格納するため足している
         self.pos[x] += self.pos[y];
         self.pos[y] = x as isize;
 
