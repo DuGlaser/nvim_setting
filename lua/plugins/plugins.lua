@@ -91,6 +91,14 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons'}
   }
 
+  -- lsp
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/completion-nvim'
+  use {
+    "steelsojka/completion-buffers",
+    after = "completion-nvim"
+  }
+
   -- treesitter
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-refactor'
