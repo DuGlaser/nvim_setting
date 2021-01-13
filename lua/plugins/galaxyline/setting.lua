@@ -58,8 +58,14 @@ gls.left[4] = {
   FileName = {
     provider = function()
       local path = vim.fn.expand('%:p')
-      -- git_path -> ~~~/.git
       local _, git_path = pcall(vim.api.nvim_buf_get_var,0,'git_dir')
+
+      if string.find(git_path, ".git/modules") ~= nil then
+        -- git_path -> ~~~/.git/modules
+        return string.sub(path, string.len(git_path)-11)
+      end
+
+      -- git_path -> ~~~/.git
       return string.sub(path, string.len(git_path)-3)
     end,
     condition = buffer_not_empty,
