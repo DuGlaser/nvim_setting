@@ -31,18 +31,6 @@ return require('packer').startup(function()
   use 'mattn/emmet-vim'
   use 'tpope/vim-fugitive'
   use {
-    'yardnsm/vim-import-cost',
-    run = 'yarn install --frozen-lockfile',
-    config = function() 
-      vim.cmd('augroup import_cost_auto_run')
-      vim.cmd('autocmd!')
-      vim.cmd('autocmd InsertLeave *.js,*.jsx,*.ts,*.tsx ImportCost')
-      vim.cmd('autocmd BufEnter *.js,*.jsx,*.ts,*.tsx ImportCost')
-      vim.cmd('autocmd CursorHold *.js,*.jsx,*.ts,*.tsx ImportCost')
-      vim.cmd('augroup END')
-    end
-  }
-  use {
     'liuchengxu/vim-clap',
     run = function() vim.cmd('Clap install-binary')  end
   }
@@ -102,10 +90,6 @@ return require('packer').startup(function()
     'glepnir/galaxyline.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-
-  -- treesitter
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- fern
   use 'lambdalisue/fern.vim'
