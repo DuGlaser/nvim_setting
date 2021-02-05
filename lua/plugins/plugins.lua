@@ -36,10 +36,6 @@ return require('packer').startup(function()
   }
 
   use {
-    'neoclide/coc.nvim', 
-    run = 'yarn install --frozen-lockfile'
-  }
-  use {
     'akinsho/nvim-bufferline.lua',
     requires = {
       {'kyazdani42/nvim-web-devicons'},
@@ -86,11 +82,7 @@ return require('packer').startup(function()
 
   -- lsp
   use 'neovim/nvim-lspconfig'
-  use 'nvim-lua/completion-nvim'
-  use {
-    "steelsojka/completion-buffers",
-    after = "completion-nvim"
-  }
+  use 'hrsh7th/nvim-compe'
 
   -- treesitter
   use 'nvim-treesitter/nvim-treesitter'
