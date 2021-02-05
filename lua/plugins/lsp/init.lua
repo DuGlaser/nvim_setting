@@ -1,3 +1,2 @@
 require 'plugins.lsp.setting'
-
-vim.cmd('runtime ./keymap.vim')
+require 'plugins.lsp.complete'
