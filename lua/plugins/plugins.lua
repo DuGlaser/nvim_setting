@@ -17,8 +17,8 @@ end
 
 return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
+  use {'gruvbox-community/gruvbox', opt = true}
 
-  use 'gruvbox-community/gruvbox'
   use 'machakann/vim-sandwich'
   use 'christoomey/vim-tmux-navigator'
   use 'romgrk/equal.operator'
@@ -47,13 +47,6 @@ return require('packer').startup(function()
   }
   use {
     'lewis6991/gitsigns.nvim',
-    requires = {
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
-    }
-  }
-  use {
-    'nvim-telescope/telescope.nvim',
     requires = {
       {'nvim-lua/popup.nvim'},
       {'nvim-lua/plenary.nvim'},

@@ -1,6 +1,5 @@
 require 'plugins.plugins'
 require 'plugins.fern'
--- require 'plugins.telescope'
 require 'plugins.clap'
 require 'plugins.lsp'
 require 'plugins.treesitter'
