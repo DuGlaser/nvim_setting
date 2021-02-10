@@ -159,11 +159,11 @@ let g:coc_global_extensions = [
       \ 'coc-tailwindcss',
       \ 'coc-spell-checker',
       \ 'coc-prettier',
-      \ 'coc-pairs',
       \ 'coc-eslint',
       \ 'coc-rust-analyzer',
       \ 'coc-go',
       \ 'coc-html',
       \ 'coc-css',
       \ 'coc-pyright',
+      \ 'coc-tabnine',
       \ ]
