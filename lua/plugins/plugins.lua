@@ -53,6 +53,12 @@ return require('packer').startup(function()
     }
   }
   use {
+    'windwp/nvim-autopairs',
+    config = function() 
+      vim.api.nvim_set_keymap('n', '$', "<cmd>lua require'hop'.jump_words()<cr>", {})
+    end
+  }
+  use {
     'kana/vim-operator-replace',
     requires = {
       {'kana/vim-operator-user'}
