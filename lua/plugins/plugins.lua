@@ -30,9 +30,10 @@ return require('packer').startup(function()
   use 'kevinhwang91/nvim-hlslens'
   use 'mattn/emmet-vim'
   use 'tpope/vim-fugitive'
+  use 'liuchengxu/vim-clap'
   use {
-    'liuchengxu/vim-clap',
-    run = function() vim.cmd('Clap install-binary')  end
+    'phaazon/hop.nvim',
+    config = function() require('nvim-autopairs').setup() end
   }
 
   use {
