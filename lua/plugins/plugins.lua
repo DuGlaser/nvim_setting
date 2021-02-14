@@ -31,10 +31,6 @@ return require('packer').startup(function()
   use 'mattn/emmet-vim'
   use 'tpope/vim-fugitive'
   use 'liuchengxu/vim-clap'
-  use {
-    'phaazon/hop.nvim',
-    config = function() require('nvim-autopairs').setup() end
-  }
 
   use {
     'neoclide/coc.nvim', 
@@ -55,9 +51,7 @@ return require('packer').startup(function()
   }
   use {
     'windwp/nvim-autopairs',
-    config = function() 
-      vim.api.nvim_set_keymap('n', '$', "<cmd>lua require'hop'.jump_words()<cr>", {})
-    end
+    config = function() require('nvim-autopairs').setup() end
   }
   use {
     'kana/vim-operator-replace',
